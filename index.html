@@ -11,82 +11,230 @@
             --secondary: #FFB81C;
             --dark: #1A1A1A;
             --light: #F4F4F4;
+            --accent: #eef7f2;
         }
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
         body { background: var(--light); color: var(--dark); line-height: 1.6; }
         header { background: var(--primary); color: white; padding: 40px 20px; text-align: center; border-bottom: 5px solid var(--secondary); }
-        header h1 { font-size: 2.5rem; margin-bottom: 10px; }
-        header p { font-size: 1.2rem; font-style: italic; opacity: 0.9; }
+        .logo-container { margin-bottom: 15px; }
+        .logo-img { max-height: 90px; width: auto; border-radius: 4px; }
+        header h1 { font-size: 2.5rem; margin-bottom: 5px; }
+        header p { font-size: 1.2rem; font-style: italic; opacity: 0.9; text-transform: uppercase; letter-spacing: 1px; }
         .container { max-width: 1100px; margin: 40px auto; padding: 0 20px; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 30px; }
-        .card { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); border-top: 4px solid var(--primary); }
-        .card h3 { margin-bottom: 15px; color: var(--primary); font-size: 1.4rem; display: flex; align-items: center; gap: 10px; }
-        .btn { display: inline-block; background: var(--primary); color: white; padding: 12px 24px; text-align: center; border-radius: 4px; text-decoration: none; font-weight: bold; margin-top: 15px; transition: 0.3s; width: 100%; }
-        .btn:hover { background: #005c26; box-shadow: 0 4px 10px rgba(0,0,0,0.15); }
-        .btn-sec { background: var(--dark); }
-        .btn-sec:hover { background: #333; }
-        .btn i { margin-right: 8px; }
+        .address-box { background: #eef7f2; border-left: 4px solid var(--primary); padding: 20px; margin-bottom: 40px; border-radius: 0 4px 4px 0; font-size: 1rem; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        .address-box strong { color: var(--primary); }
+        .section-title { font-size: 1.8rem; color: var(--primary); margin-bottom: 20px; border-bottom: 3px solid var(--secondary); padding-bottom: 8px; display: flex; align-items: center; gap: 10px; }
+        .nav-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 15px; margin-bottom: 5px; }
+        .nav-btn { display: flex; align-items: center; justify-content: center; gap: 10px; background: white; color: var(--primary); border: 2px solid var(--primary); padding: 12px; text-decoration: none; font-weight: bold; border-radius: 6px; transition: 0.3s; text-align: center; }
+        .nav-btn:hover { background: var(--primary); color: white; }
+        .profiles-container { margin-top: 50px; }
+        .profile-row { display: flex; flex-direction: column; background: white; padding: 30px; margin-bottom: 25px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-top: 4px solid var(--primary); }
+        .profile-header { display: flex; align-items: center; gap: 15px; margin-bottom: 15px; color: var(--primary); }
+        .profile-header i { color: var(--secondary); font-size: 1.6rem; }
+        .profile-header h3 { font-size: 1.4rem; }
+        .profile-body p { font-size: 1.05rem; margin-bottom: 15px; color: #444; }
+        .profile-features { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 10px; padding-left: 5px; }
+        .feature-item { background: var(--accent); padding: 10px 15px; border-radius: 4px; font-size: 0.95rem; font-weight: 500; display: flex; align-items: center; gap: 8px; }
+        .feature-item i { color: var(--primary); font-size: 0.85rem; }
+        .bottom-hero { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); text-align: center; margin-top: 50px; border-bottom: 5px solid var(--primary); }
+        .hero-img-container { margin-bottom: 20px; overflow: hidden; border-radius: 6px; }
+        .hero-img { width: 100%; max-width: 800px; height: auto; object-fit: cover; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        .bottom-hero h2 { color: var(--primary); margin-bottom: 10px; }
+        .bottom-hero p { max-width: 700px; margin: 0 auto; color: #555; font-style: italic; }
         footer { background: var(--dark); color: white; text-align: center; padding: 30px 20px; margin-top: 60px; font-size: 0.9rem; }
         footer p { margin-bottom: 10px; }
-        .address-box { background: #eef7f2; border-left: 4px solid var(--primary); padding: 15px; margin: 20px 0; border-radius: 0 4px 4px 0; font-size: 0.95rem; }
+        .footer-links { margin-top: 10px; }
+        .footer-links a { color: var(--secondary); text-decoration: none; margin: 0 10px; }
+        .footer-links a:hover { text-decoration: underline; }
     </style>
-</head>
-<body>
+</head> 
+ <body>
 
     <header>
+        <div class="logo-container">
+            <img src="logo.png.jpg" alt="LUF Network Logo" class="logo-img" onerror="this.style.display='none'">
+        </div>
         <h1>Local Urban Forum Network</h1>
-        <p>(LUF NETWORK NATIONAL SECRETARIAT)</p>
+        <p>(LUF Network National Secretariat)</p>
     </header>
 
     <div class="container">
         <div class="address-box">
-            <strong><i class="fas fa-map-marker-alt"></i> Field Headquarters:</strong> LUF Network Community Centre, Kibra, Nairobi (Located Near the Kibra Huduma Centre, Kibera Drive)<br>
-            <strong><i class="fas fa-envelope"></i> Postal Address:</strong> P.O. Box 34899-00100, Nairobi, Kenya
+            <p><strong><i class="fas fa-map-marker-alt"></i> Field Headquarters:</strong> LUF Network Community Centre, Kibra, Nairobi (Located Near the Kibra Huduma Centre, Kibera Drive)</p>
+            <p style="margin-top: 8px;"><strong><i class="fas fa-envelope"></i> Postal Address:</strong> P.O. Box 34899-00100, Nairobi, Kenya | <strong><i class="fas fa-paper-plane"></i> Transmittal Intake:</strong> solidaritykenya@yahoo.com</p>
         </div>
 
-        <div class="grid">
-            <div class="card">
-                <h3><i class="fas fa-layer-group"></i> 9-Pillar Framework</h3>
-                <p>Explore our structural governance models, participatory community appraisals (CAPs), and localized resource distribution matrices across our 9 core public service pillars.</p>
-                <a href="about.html" class="btn"><i class="fas fa-arrow-right"></i> View Our Framework</a>
+        <h2 class="section-title"><i class="fas fa-network-wired"></i> Core Portals & Linkages</h2>
+        <div class="nav-grid">
+            <a href="about.html" class="nav-btn"><i class="fas fa-layer-group"></i> 9-Pillar Framework</a>
+            <a href="projects.html" class="nav-btn"><i class="fas fa-clinic-medical"></i> Clinical Projects</a>
+            <a href="partners.html" class="nav-btn"><i class="fas fa-handshake"></i> Institutional Partners</a>
+            <a href="management.html" class="nav-btn"><i class="fas fa-database"></i> Governance Ledger</a>
+        </div>
+
+        <div class="profiles-container">
+            <h2 class="section-title"><i class="fas fa-clipboard-list"></i> Profiles of Our 9 Core Activities</h2>
+
+            <!-- Activity 1 -->
+            <div class="profile-row">
+                <div class="profile-header">
+                    <i class="fas fa-heartbeat"></i>
+                    <h3>1. Community Health & Safety tracks</h3>
+                </div>
+                <div class="profile-body">
+                    <p>Mobilizing foundational urban primary care tracks, localized medical response pipelines, and mental wellness access frameworks in informal settlements.</p>
+                    <div class="profile-features">
+                        <div class="feature-item"><i class="fas fa-check"></i> Frontline Psychiatric Safety</div>
+                        <div class="feature-item"><i class="fas fa-check"></i> Epilepsy Support Infrastructure</div>
+                        <div class="feature-item"><i class="fas fa-check"></i> Field Assessment Matrix</div>
+                    </div>
+                </div>
             </div>
 
-            <div class="card">
-                <h3><i class="fas fa-clinic-medical"></i> Clinical Mastery Project</h3>
-                <p>Review the details of our 3-Year, 300,000 DKK clinical initiative funded via external global education grants, focusing on frontline psychiatric and epilepsy safety tracks.</p>
-                <a href="projects.html" class="btn"><i class="fas fa-microscope"></i> Explore Projects</a>
+            <!-- Activity 2 -->
+            <div class="profile-row">
+                <div class="profile-header">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>2. Inclusive Education & Capacity Building</h3>
+                </div>
+                <div class="profile-body">
+                    <p>Developing specialized clinical learning networks and training pipelines for grassroots development workers to expand local capability.</p>
+                    <div class="profile-features">
+                        <div class="feature-item"><i class="fas fa-check"></i> Community Center Workshops</div>
+                        <div class="feature-item"><i class="fas fa-check"></i> Clinical Mastery Modules</div>
+                        <div class="feature-item"><i class="fas fa-check"></i> Grant-Aided Training Tracks</div>
+                    </div>
+                </div>
             </div>
 
-            <div class="card">
-                <h3><i class="fas fa-handshake"></i> Institutional Partners</h3>
-                <p>Discover our collaborative linkages with leading national referral networks, academic medical centers, and international healthcare development funds.</p>
-                <a href="partners.html" class="btn"><i class="fas fa-handshake"></i> Our Partners</a>
+            <!-- Activity 3 -->
+            <div class="profile-row">
+                <div class="profile-header">
+                    <i class="fas fa-tint"></i>
+                    <h3>3. Water, Sanitation & Hygiene Infrastructure</h3>
+                </div>
+                <div class="profile-body">
+                    <p>Deploying localized resource management maps and structural health security improvements across high-density neighborhoods.</p>
+                    <div class="profile-features">
+                        <div class="feature-item"><i class="fas fa-check"></i> Clean Water Access Matrices</div>
+                        <div class="feature-item"><i class="fas fa-check"></i> Participatory Sanitation Plans</div>
+                        <div class="feature-item"><i class="fas fa-check"></i> Drainage Improvement Layouts</div>
+                    </div>
+                </div>
             </div>
 
-            <div class="card">
-                <h3><i class="fas fa-database"></i> Management Portal</h3>
-                <p>Access our transparent governance organogram, programmatic accounting balances, active project monitoring files, and the international grant tracking ledger.</p>
-                <a href="management.html" class="btn"><i class="fas fa-chart-line"></i> Open Governance Ledger</a>
+            <!-- Activity 4 -->
+            <div class="profile-row">
+                <div class="profile-header">
+                    <i class="fas fa-users-cog"></i>
+                    <h3>4. Social Governance & Community Appraisals</h3>
+                </div>
+                <div class="profile-body">
+                    <p>Enacting community-led diagnostic appraisals to directly determine budget priorities and monitor internal administrative transparent tracking ledgers.</p>
+                    <div class="profile-features">
+                        <div class="feature-item"><i class="fas fa-check"></i> Participatory CAP Diagnostics</div>
+                        <div class="feature-item"><i class="fas fa-check"></i> Decentralized Steering Councils</div>
+                        <div class="feature-item"><i class="fas fa-check"></i> Organogram Transparency Track</div>
+                    </div>
+                </div>
+            </div> 
+            <!-- Activity 5 -->
+            <div class="profile-row">
+                <div class="profile-header">
+                    <i class="fas fa-gavel"></i>
+                    <h3>5. Human Rights Protective Integration</h3>
+                </div>
+                <div class="profile-body">
+                    <p>Processing structured legal case routing matrices and community mapping to counter spatial vulnerability and preserve informal land rights.</p>
+                    <div class="profile-features">
+                        <div class="feature-item"><i class="fas fa-check"></i> Intake Case Referral Mapping</div>
+                        <div class="feature-item"><i class="fas fa-check"></i> Legal Compliance Interfaces</div>
+                        <div class="feature-item"><i class="fas fa-check"></i> Vulnerable Group Protections</div>
+                    </div>
+                </div>
             </div>
 
-            <div class="card">
-                <h3><i class="fas fa-share-alt"></i> Connect with LUF</h3>
-                <p>Follow our real-time grassroots field updates, volunteer activities, and public health community health announcements via our social networks.</p>
-                <a href="https://facebook.com" target="_blank" class="btn"><i class="fab fa-facebook-f"></i> Follow on Facebook</a>
-                <a href="https://linkedin.com" target="_blank" class="btn btn-sec"><i class="fab fa-linkedin-in"></i> Follow on LinkedIn</a>
+            <!-- Activity 6 -->
+            <div class="profile-row">
+                <div class="profile-header">
+                    <i class="fas fa-seedling"></i>
+                    <h3>6. Urban Agriculture & Nutritional Assets</h3>
+                </div>
+                <div class="profile-body">
+                    <p>Fostering localized food production tracks and training frameworks to counter urban economic precarity and build dietary security.</p>
+                    <div class="profile-features">
+                        <div class="feature-item"><i class="fas fa-check"></i> Vertical Micro-Farming Pilots</div>
+                        <div class="feature-item"><i class="fas fa-check"></i> Local Knowledge Transmission</div>
+                        <div class="feature-item"><i class="fas fa-check"></i> Nutritional Support Matrices</div>
+                    </div>
+                </div>
             </div>
 
-            <div class="card">
-                <h3><i class="fas fa-envelope-open-text"></i> Support & Intake</h3>
-                <p>Get in immediate touch with our secretariat program coordinators for transmittal verification, grant inquiries, or structured case referral intake routing maps.</p>
-                <a href="mailto:solidaritykenya@yahoo.com" class="btn"><i class="fas fa-paper-plane"></i> Email Secretariat</a>
+            <!-- Activity 7 -->
+            <div class="profile-row">
+                <div class="profile-header">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>7. Local Economic Empowerment Initiatives</h3>
+                </div>
+                <div class="profile-body">
+                    <p>Configuring internal transparent accounts, grassroot savings loops, and resource distribution channels targeted at small-scale traders.</p>
+                    <div class="profile-features">
+                        <div class="feature-item"><i class="fas fa-check"></i> Cooperative Incubation Frameworks</div>
+                        <div class="feature-item"><i class="fas fa-check"></i> Resource Distribution Ledgers</div>
+                        <div class="feature-item"><i class="fas fa-check"></i> Micro-Asset Allocation Tracks</div>
+                    </div>
+                </div>
             </div>
+
+            <!-- Activity 8 -->
+            <div class="profile-row">
+                <div class="profile-header">
+                    <i class="fas fa-home"></i>
+                    <h3>8. Settlement Habitat Upgrades</h3>
+                </div>
+                <div class="profile-body">
+                    <p>Coordinating material updates and spatial layout improvements for local hubs to boost baseline community structural security.</p>
+                    <div class="profile-features">
+                        <div class="feature-item"><i class="fas fa-check"></i> Community Hub Infrastructure</div>
+                        <div class="feature-item"><i class="fas fa-check"></i> Spatial Layout Management</div>
+                        <div class="feature-item"><i class="fas fa-check"></i> Adaptive Safety Enhancements</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Activity 9 -->
+            <div class="profile-row">
+                <div class="profile-header">
+                    <i class="fas fa-globe-africa"></i>
+                    <h3>9. Climate Adaptation and Restoration</h3>
+                </div>
+                <div class="profile-body">
+                    <p>Organizing ecological diversion strategies and structural urban hazard mappings to buffer micro-habitats against environmental instability.</p>
+                    <div class="profile-features">
+                        <div class="feature-item"><i class="fas fa-check"></i> Ecological Hazard Mitigation</div>
+                        <div class="feature-item"><i class="fas fa-check"></i> Waste Diversion Models</div>
+                        <div class="feature-item"><i class="fas fa-check"></i> Resilience Threat Matrix</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Bottom Hero Graphic Section -->
+        <div class="bottom-hero">
+            <div class="hero-img-container">
+                <img src="kenya-advocacy.jpg" alt="Advocacy in Action" class="hero-img" onerror="this.style.removeProperty('display'); this.src='project-relief.png.jpg';">
+            </div>
+            <h2>Solidarity and Grassroots Advocacy</h2>
+            <p>Advancing structural transformations through local mobilization, transparent institutional link-building, and verified clinical excellence paths across Kenya's urban spaces.</p>
         </div>
     </div>
 
     <footer>
         <p>&copy; 2026 Local Urban Forum Network (LUF Network). All Rights Reserved.</p>
-        <p>Official Digital Compliance Interface | Transmittal Contact: solidaritykenya@yahoo.com</p>
+        <p>Official Digital Compliance Interface | National Secretariat Portal v3.0</p>
+        <div class="footer-links">
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a> | 
+            <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+        </div>
     </footer>
 
 </body>
