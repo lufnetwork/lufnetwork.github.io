@@ -3,239 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Local Urban Forum Network</title>
-    <link rel="stylesheet" href="https://cloudflare.com">
-    <style>
-        :root {
-            --primary: #007A33;
-            --secondary: #FFB81C;
-            --dark: #1A1A1A;
-            --light: #F4F4F4;
-            --accent: #eef7f2;
-        }
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        body { background: var(--light); color: var(--dark); line-height: 1.6; }
-        header { background: var(--primary); color: white; padding: 40px 20px; text-align: center; border-bottom: 5px solid var(--secondary); }
-        .logo-container { margin-bottom: 15px; }
-        .logo-img { max-height: 90px; width: auto; border-radius: 4px; }
-        header h1 { font-size: 2.5rem; margin-bottom: 5px; }
-        header p { font-size: 1.2rem; font-style: italic; opacity: 0.9; text-transform: uppercase; letter-spacing: 1px; }
-        .container { max-width: 1100px; margin: 40px auto; padding: 0 20px; }
-        .address-box { background: #eef7f2; border-left: 4px solid var(--primary); padding: 20px; margin-bottom: 40px; border-radius: 0 4px 4px 0; font-size: 1rem; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
-        .address-box strong { color: var(--primary); }
-        .section-title { font-size: 1.8rem; color: var(--primary); margin-bottom: 20px; border-bottom: 3px solid var(--secondary); padding-bottom: 8px; display: flex; align-items: center; gap: 10px; }
-        .nav-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 15px; margin-bottom: 5px; }
-        .nav-btn { display: flex; align-items: center; justify-content: center; gap: 10px; background: white; color: var(--primary); border: 2px solid var(--primary); padding: 12px; text-decoration: none; font-weight: bold; border-radius: 6px; transition: 0.3s; text-align: center; }
-        .nav-btn:hover { background: var(--primary); color: white; }
-        .profiles-container { margin-top: 50px; }
-        .profile-row { display: flex; flex-direction: column; background: white; padding: 30px; margin-bottom: 25px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-top: 4px solid var(--primary); }
-        .profile-header { display: flex; align-items: center; gap: 15px; margin-bottom: 15px; color: var(--primary); }
-        .profile-header i { color: var(--secondary); font-size: 1.6rem; }
-        .profile-header h3 { font-size: 1.4rem; }
-        .profile-body p { font-size: 1.05rem; margin-bottom: 15px; color: #444; }
-        .profile-features { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 10px; padding-left: 5px; }
-        .feature-item { background: var(--accent); padding: 10px 15px; border-radius: 4px; font-size: 0.95rem; font-weight: 500; display: flex; align-items: center; gap: 8px; }
-        .feature-item i { color: var(--primary); font-size: 0.85rem; }
-        .bottom-hero { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); text-align: center; margin-top: 50px; border-bottom: 5px solid var(--primary); }
-        .hero-img-container { margin-bottom: 20px; overflow: hidden; border-radius: 6px; }
-        .hero-img { width: 100%; max-width: 800px; height: auto; object-fit: cover; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
-        .bottom-hero h2 { color: var(--primary); margin-bottom: 10px; }
-        .bottom-hero p { max-width: 700px; margin: 0 auto; color: #555; font-style: italic; }
-        footer { background: var(--dark); color: white; text-align: center; padding: 30px 20px; margin-top: 60px; font-size: 0.9rem; }
-        footer p { margin-bottom: 10px; }
-        .footer-links { margin-top: 10px; }
-        .footer-links a { color: var(--secondary); text-decoration: none; margin: 0 10px; }
-        .footer-links a:hover { text-decoration: underline; }
-    </style>
-</head> 
- <body>
+    <title>LUF NETWORK | Official NGO Website</title>
+</head>
+<body style="font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; background-color: #f8fafc; color: #1e293b; line-height: 1.6;">
 
-    <header>
-        <div class="logo-container">
-            <img src="logo.png.jpg" alt="LUF Network Logo" class="logo-img" onerror="this.style.display='none'">
+    <!-- TOP NAVIGATION BAR -->
+    <header style="background-color: #ffffff; padding: 15px 40px; border-bottom: 1px solid #e2e8f0; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 8px rgba(0,0,0,0.04); position: sticky; top: 0; z-index: 1000;">
+        <div style="display: flex; align-items: center; gap: 50px;">
+            <a href="index.html" style="display: block; text-decoration: none;">
+                <img src="logo.png.jpg" alt="LUF NETWORK Logo" style="height: 95px; width: auto; object-fit: contain; display: block;">
+            </a>
+            <nav style="display: flex; align-items: center; gap: 35px;">
+                <a href="index.html" style="color: #2563eb; text-decoration: none; font-weight: 700; font-size: 17px; border-bottom: 3px solid #2563eb; padding-bottom: 6px; letter-spacing: 0.5px;">Home</a>
+                <a href="about.html" style="color: #1e293b; text-decoration: none; font-weight: 700; font-size: 17px; letter-spacing: 0.5px;">About Us</a>
+                <a href="projects.html" style="color: #1e293b; text-decoration: none; font-weight: 700; font-size: 17px; letter-spacing: 0.5px;">Our Projects</a>
+                <a href="partners.html" style="color: #1e293b; text-decoration: none; font-weight: 700; font-size: 17px; letter-spacing: 0.5px;">Partners & Synergy</a>
+            </nav>
         </div>
-        <h1>Local Urban Forum Network</h1>
-        <p>(LUF Network National Secretariat)</p>
+        <a href="mailto:solidaritykenya@yahoo.com" style="background-color: #2563eb; color: white; text-decoration: none; padding: 12px 24px; border-radius: 8px; font-weight: 700; font-size: 15px; box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.2); letter-spacing: 0.5px;">Get In Touch</a>
     </header>
 
-    <div class="container">
-        <div class="address-box">
-            <p><strong><i class="fas fa-map-marker-alt"></i> Field Headquarters:</strong> LUF Network Community Centre, Kibra, Nairobi (Located Near the Kibra Huduma Centre, Kibera Drive)</p>
-            <p style="margin-top: 8px;"><strong><i class="fas fa-envelope"></i> Postal Address:</strong> P.O. Box 34899-00100, Nairobi, Kenya | <strong><i class="fas fa-paper-plane"></i> Transmittal Intake:</strong> solidaritykenya@yahoo.com</p>
+    <!-- MAIN CONTAINER -->
+    <main style="max-width: 1200px; margin: 0 auto; padding: 40px 20px; text-align: center;">
+        
+        <div style="margin-bottom: 40px;">
+            <img src="logo.png.jpg" alt="LUF NETWORK Logo" width="750" style="image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges; max-width: 100%; height: auto;">
         </div>
 
-        <h2 class="section-title"><i class="fas fa-network-wired"></i> Core Portals & Linkages</h2>
-        <div class="nav-grid">
-            <a href="about.html" class="nav-btn"><i class="fas fa-layer-group"></i> 9-Pillar Framework</a>
-            <a href="projects.html" class="nav-btn"><i class="fas fa-clinic-medical"></i> Clinical Projects</a>
-            <a href="partners.html" class="nav-btn"><i class="fas fa-handshake"></i> Institutional Partners</a>
-            <a href="management.html" class="nav-btn"><i class="fas fa-database"></i> Governance Ledger</a>
+        <h1 style="font-size: 42px; color: #0f172a; margin-bottom: 25px; font-weight: 800;">Welcome to LUF NETWORK</h1> 
+        <h2 style="font-size: 22px; color: #475569; margin-top: -15px; margin-bottom: 35px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">(Local Urban Forum Network)</h2>
+        
+        <div style="background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%); padding: 35px; border-radius: 12px; border-left: 6px solid #2563eb; margin-bottom: 60px; text-align: left; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);">
+            <h3 style="margin-top: 0; color: #1d4ed8; font-size: 16px; text-transform: uppercase; letter-spacing: 1px; font-weight: 700;">Our Core Mission</h3>
+            <p style="font-size: 20px; color: #1e3a8a; margin: 0; font-weight: 600; line-height: 1.5;">
+                "We are dedicated to building communities, empowering individuals, and creating lasting social impact. At LUF NETWORK, our goal is to support people through sustainable community programs, education, and direct resources."
+            </p>
         </div>
 
-        <div class="profiles-container">
-            <h2 class="section-title"><i class="fas fa-clipboard-list"></i> Profiles of Our 9 Core Activities</h2>
+        <h2 style="font-size: 32px; color: #0f172a; margin-bottom: 15px; font-weight: 800;">The 9 Pillars of Our Work</h2>
+        <p style="color: #64748b; font-size: 18px; margin-bottom: 40px; max-width: 700px; margin-left: auto; margin-right: auto;">Our comprehensive structural framework driving targeted resource distribution, social justice, and urban community resilience.</p>
 
-            <!-- Activity 1 -->
-            <div class="profile-row">
-                <div class="profile-header">
-                    <i class="fas fa-heartbeat"></i>
-                    <h3>1. Community Health & Safety tracks</h3>
-                </div>
-                <div class="profile-body">
-                    <p>Mobilizing foundational urban primary care tracks, localized medical response pipelines, and mental wellness access frameworks in informal settlements.</p>
-                    <div class="profile-features">
-                        <div class="feature-item"><i class="fas fa-check"></i> Frontline Psychiatric Safety</div>
-                        <div class="feature-item"><i class="fas fa-check"></i> Epilepsy Support Infrastructure</div>
-                        <div class="feature-item"><i class="fas fa-check"></i> Field Assessment Matrix</div>
-                    </div>
-                </div>
+        <div style="text-align: left; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-bottom: 60px;"> 
+             <!-- Pillar 1 Card -->
+            <div style="background: #ffffff; padding: 30px; border-radius: 10px; border: 1px solid #e2e8f0; border-top: 5px solid #ef4444;">
+                <h3 style="color: #ef4444; margin-top: 0; font-size: 22px; font-weight: 700;">1. Community Support</h3>
+                <p style="color: #475569; margin-bottom: 0; font-size: 15px;">Providing food security distributions, clean clothing networks, and critical emergency response resources to families navigating urgent financial crises and systemic hardships.</p>
             </div>
 
-            <!-- Activity 2 -->
-            <div class="profile-row">
-                <div class="profile-header">
-                    <i class="fas fa-graduation-cap"></i>
-                    <h3>2. Inclusive Education & Capacity Building</h3>
-                </div>
-                <div class="profile-body">
-                    <p>Developing specialized clinical learning networks and training pipelines for grassroots development workers to expand local capability.</p>
-                    <div class="profile-features">
-                        <div class="feature-item"><i class="fas fa-check"></i> Community Center Workshops</div>
-                        <div class="feature-item"><i class="fas fa-check"></i> Clinical Mastery Modules</div>
-                        <div class="feature-item"><i class="fas fa-check"></i> Grant-Aided Training Tracks</div>
-                    </div>
-                </div>
+            <!-- Pillar 2 Card -->
+            <div style="background: #ffffff; padding: 30px; border-radius: 10px; border: 1px solid #e2e8f0; border-top: 5px solid #f59e0b;">
+                <h3 style="color: #f59e0b; margin-top: 0; font-size: 22px; font-weight: 700;">2. Education & Skills</h3>
+                <p style="color: #475569; margin-bottom: 0; font-size: 15px;">Hosting structured community classes, digital literacy bootcamps, and professional vocational training sessions aimed at equipping marginalized individuals to secure sustainable careers.</p>
             </div>
 
-            <!-- Activity 3 -->
-            <div class="profile-row">
-                <div class="profile-header">
-                    <i class="fas fa-tint"></i>
-                    <h3>3. Water, Sanitation & Hygiene Infrastructure</h3>
-                </div>
-                <div class="profile-body">
-                    <p>Deploying localized resource management maps and structural health security improvements across high-density neighborhoods.</p>
-                    <div class="profile-features">
-                        <div class="feature-item"><i class="fas fa-check"></i> Clean Water Access Matrices</div>
-                        <div class="feature-item"><i class="fas fa-check"></i> Participatory Sanitation Plans</div>
-                        <div class="feature-item"><i class="fas fa-check"></i> Drainage Improvement Layouts</div>
-                    </div>
-                </div>
+            <!-- Pillar 3 Card -->
+            <div style="background: #ffffff; padding: 30px; border-radius: 10px; border: 1px solid #e2e8f0; border-top: 5px solid #06b6d4;">
+                <h3 style="color: #06b6d4; margin-top: 0; font-size: 22px; font-weight: 700;">3. Advocacy & Human Rights</h3>
+                <p style="color: #475569; margin-bottom: 0; font-size: 15px;">Standing firmly at the forefront of social justice to protect fundamental human rights, promote legal equality, amplify vulnerable voices, and lobby for institutional policy improvements.</p>
             </div>
 
-            <!-- Activity 4 -->
-            <div class="profile-row">
-                <div class="profile-header">
-                    <i class="fas fa-users-cog"></i>
-                    <h3>4. Social Governance & Community Appraisals</h3>
-                </div>
-                <div class="profile-body">
-                    <p>Enacting community-led diagnostic appraisals to directly determine budget priorities and monitor internal administrative transparent tracking ledgers.</p>
-                    <div class="profile-features">
-                        <div class="feature-item"><i class="fas fa-check"></i> Participatory CAP Diagnostics</div>
-                        <div class="feature-item"><i class="fas fa-check"></i> Decentralized Steering Councils</div>
-                        <div class="feature-item"><i class="fas fa-check"></i> Organogram Transparency Track</div>
-                    </div>
-                </div>
+            <!-- Pillar 4 Card -->
+            <div style="background: #ffffff; padding: 30px; border-radius: 10px; border: 1px solid #e2e8f0; border-top: 5px solid #10b981;">
+                <h3 style="color: #10b981; margin-top: 0; font-size: 22px; font-weight: 700;">4. Health & Wellness</h3>
+                <p style="color: #475569; margin-bottom: 0; font-size: 15px;">Deploying mobile medical clinics to deliver essential primary healthcare access while running stigma-free mental health support spaces, community counseling networks, and psychological wellness training.</p>
             </div> 
-            <!-- Activity 5 -->
-            <div class="profile-row">
-                <div class="profile-header">
-                    <i class="fas fa-gavel"></i>
-                    <h3>5. Human Rights Protective Integration</h3>
-                </div>
-                <div class="profile-body">
-                    <p>Processing structured legal case routing matrices and community mapping to counter spatial vulnerability and preserve informal land rights.</p>
-                    <div class="profile-features">
-                        <div class="feature-item"><i class="fas fa-check"></i> Intake Case Referral Mapping</div>
-                        <div class="feature-item"><i class="fas fa-check"></i> Legal Compliance Interfaces</div>
-                        <div class="feature-item"><i class="fas fa-check"></i> Vulnerable Group Protections</div>
-                    </div>
-                </div>
+            
+            <!-- Pillar 5 Card -->
+            <div style="background: #ffffff; padding: 30px; border-radius: 10px; border: 1px solid #e2e8f0; border-top: 5px solid #22c55e;">
+                <h3 style="color: #22c55e; margin-top: 0; font-size: 22px; font-weight: 700;">5. Sustainability</h3>
+                <p style="color: #475569; margin-bottom: 0; font-size: 15px;">Spearheading hyper-local green initiatives, trash management programs, urban clean-ups, and ecological conservation workshops to create clean, climate-resilient neighborhoods for future generations.</p>
             </div>
 
-            <!-- Activity 6 -->
-            <div class="profile-row">
-                <div class="profile-header">
-                    <i class="fas fa-seedling"></i>
-                    <h3>6. Urban Agriculture & Nutritional Assets</h3>
-                </div>
-                <div class="profile-body">
-                    <p>Fostering localized food production tracks and training frameworks to counter urban economic precarity and build dietary security.</p>
-                    <div class="profile-features">
-                        <div class="feature-item"><i class="fas fa-check"></i> Vertical Micro-Farming Pilots</div>
-                        <div class="feature-item"><i class="fas fa-check"></i> Local Knowledge Transmission</div>
-                        <div class="feature-item"><i class="fas fa-check"></i> Nutritional Support Matrices</div>
-                    </div>
-                </div>
+            <!-- Pillar 6 Card -->
+            <div style="background: #ffffff; padding: 30px; border-radius: 10px; border: 1px solid #e2e8f0; border-top: 5px solid #a855f7;">
+                <h3 style="color: #a855f7; margin-top: 0; font-size: 22px; font-weight: 700;">6. Economic Empowerment</h3>
+                <p style="color: #475569; margin-bottom: 0; font-size: 15px;">Providing micro-grants, startup equipment seed kits, and micro-enterprise business mentorship programs to help local youth and women launch micro-ventures and foster local financial independence.</p>
             </div>
 
-            <!-- Activity 7 -->
-            <div class="profile-row">
-                <div class="profile-header">
-                    <i class="fas fa-chart-line"></i>
-                    <h3>7. Local Economic Empowerment Initiatives</h3>
-                </div>
-                <div class="profile-body">
-                    <p>Configuring internal transparent accounts, grassroot savings loops, and resource distribution channels targeted at small-scale traders.</p>
-                    <div class="profile-features">
-                        <div class="feature-item"><i class="fas fa-check"></i> Cooperative Incubation Frameworks</div>
-                        <div class="feature-item"><i class="fas fa-check"></i> Resource Distribution Ledgers</div>
-                        <div class="feature-item"><i class="fas fa-check"></i> Micro-Asset Allocation Tracks</div>
-                    </div>
-                </div>
+            <!-- Pillar 7 Card -->
+            <div style="background: #ffffff; padding: 30px; border-radius: 10px; border: 1px solid #e2e8f0; border-top: 5px solid #ec4899;">
+                <h3 style="color: #ec4899; margin-top: 0; font-size: 22px; font-weight: 700;">7. Urban Resilience</h3>
+                <p style="color: #475569; margin-bottom: 0; font-size: 15px;">Developing local disaster-preparedness emergency strategies, urban flash flood management channels, and hazard relief networks to insulate dense communities from systemic structural dangers.</p>
             </div>
 
-            <!-- Activity 8 -->
-            <div class="profile-row">
-                <div class="profile-header">
-                    <i class="fas fa-home"></i>
-                    <h3>8. Settlement Habitat Upgrades</h3>
-                </div>
-                <div class="profile-body">
-                    <p>Coordinating material updates and spatial layout improvements for local hubs to boost baseline community structural security.</p>
-                    <div class="profile-features">
-                        <div class="feature-item"><i class="fas fa-check"></i> Community Hub Infrastructure</div>
-                        <div class="feature-item"><i class="fas fa-check"></i> Spatial Layout Management</div>
-                        <div class="feature-item"><i class="fas fa-check"></i> Adaptive Safety Enhancements</div>
-                    </div>
-                </div>
+            <!-- Pillar 8 Card -->
+            <div style="background: #ffffff; padding: 30px; border-radius: 10px; border: 1px solid #e2e8f0; border-top: 5px solid #6366f1;">
+                <h3 style="color: #6366f1; margin-top: 0; font-size: 22px; font-weight: 700;">8. Peace & Cohesion</h3>
+                <p style="color: #475569; margin-bottom: 0; font-size: 15px;">Establishing alternative community safe sports zones, multi-cultural youth creative arts groups, and structural conflict resolution seminars to secure peaceful neighborhoods and keep local youth safe.</p>
             </div>
 
-            <!-- Activity 9 -->
-            <div class="profile-row">
-                <div class="profile-header">
-                    <i class="fas fa-globe-africa"></i>
-                    <h3>9. Climate Adaptation and Restoration</h3>
-                </div>
-                <div class="profile-body">
-                    <p>Organizing ecological diversion strategies and structural urban hazard mappings to buffer micro-habitats against environmental instability.</p>
-                    <div class="profile-features">
-                        <div class="feature-item"><i class="fas fa-check"></i> Ecological Hazard Mitigation</div>
-                        <div class="feature-item"><i class="fas fa-check"></i> Waste Diversion Models</div>
-                        <div class="feature-item"><i class="fas fa-check"></i> Resilience Threat Matrix</div>
-                    </div>
-                </div>
+            <!-- Pillar 9 Card -->
+            <div style="background: #ffffff; padding: 30px; border-radius: 10px; border: 1px solid #e2e8f0; border-top: 5px solid #475569;">
+                <h3 style="color: #475569; margin-top: 0; font-size: 22px; font-weight: 700;">9. Research & Insights</h3>
+                <p style="color: #475569; margin-bottom: 0; font-size: 15px;">Conducting baseline health tracking, community mapping, and stigma evaluation research inside dense urban centers to supply national stakeholders and health clinics with real-world data pipelines.</p>
+            </div>
+
+            <!-- Tight-Fitting Proportional Visual Advocacy Card -->
+            <div style="background: #ffffff; border-radius: 10px; overflow: hidden; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02); display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 250px;">
+                <img src="kenya-advocacy.jpg" alt="LUF NETWORK Grassroots Community Advocacy" style="width: 100%; height: 100%; max-height: 320px; object-fit: contain; background-color: #ffffff; display: block;">
+            </div>
+
+        </div>
+
+        <!-- VISUAL CONNECT LINKS PANEL -->
+        <div style="margin-top: 50px; background-color: #ffffff; border: 1px solid #e2e8f0; padding: 30px; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02); text-align: center;">
+            <h3 style="margin-top: 0; color: #0f172a; font-size: 20px; font-weight: 800; margin-bottom: 10px;">Follow Our Community Advocacy</h3>
+            <p style="color: #64748b; font-size: 15px; margin-bottom: 20px;">Stay up to date with live field reports, photo drops, and immediate volunteer announcements through our social channels.</p>
+            
+            <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+                <a href="https://facebook.com" target="_blank" style="background-color: #1877f2; color: white; text-decoration: none; padding: 12px 24px; border-radius: 8px; font-weight: 700; font-size: 15px; box-shadow: 0 4px 6px -1px rgba(24, 119, 242, 0.15); display: inline-block;">Facebook Page</a>
+                <a href="https://linkedin.com" target="_blank" style="background-color: #0a66c2; color: white; text-decoration: none; padding: 12px 24px; border-radius: 8px; font-weight: 700; font-size: 15px; box-shadow: 0 4px 6px -1px rgba(10, 102, 194, 0.15); display: inline-block;">LinkedIn Profile</a>
+                <a href="mailto:solidaritykenya@yahoo.com" style="background-color: #ef4444; color: white; text-decoration: none; padding: 12px 24px; border-radius: 8px; font-weight: 700; font-size: 15px; box-shadow: 0 4px 6px -1px rgba(239, 68, 68, 0.15); display: inline-block;">Direct Support Email</a>
             </div>
         </div>
-        <!-- Bottom Hero Graphic Section -->
-        <div class="bottom-hero">
-            <div class="hero-img-container">
-                <img src="kenya-advocacy.jpg" alt="Advocacy in Action" class="hero-img" onerror="this.style.removeProperty('display'); this.src='project-relief.png.jpg';">
+
+        <!-- DONATION & SUSTAINABILITY HUB -->
+        <div style="margin-top: 50px; margin-bottom: 40px; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 16px; overflow: hidden; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05); text-align: left;">
+            <div style="background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%); padding: 40px; color: #ffffff; text-align: center;">
+                <h2 style="font-size: 32px; font-weight: 800; margin: 0 0 10px 0;">Support Our Mission</h2>
+                <p style="font-size: 18px; color: #93c5fd; margin: 0; max-width: 650px; margin-left: auto; margin-right: auto; font-weight: 500;">
+                    Your contribution directly drives our urban field operations, supplying critical food relief packets and clinical primary health interventions.
+                </p>
             </div>
-            <h2>Solidarity and Grassroots Advocacy</h2>
-            <p>Advancing structural transformations through local mobilization, transparent institutional link-building, and verified clinical excellence paths across Kenya's urban spaces.</p>
-        </div>
-    </div>
 
-    <footer>
-        <p>&copy; 2026 Local Urban Forum Network (LUF Network). All Rights Reserved.</p>
-        <p>Official Digital Compliance Interface | National Secretariat Portal v3.0</p>
-        <div class="footer-links">
-            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a> | 
-            <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
-        </div>
-    </footer>
-
-</body>
-</html>
+            <!-- Transparency & Allocation Matrix -->
+            <div style="padding: 40px;">
+                <h3 style="font-size: 20px; color: #0f172a; margin-top: 0; margin-bottom: 25px; font-weight: 800; text-align: center; text-transform: uppercase; letter-spacing: 0.5px;">Where Your Donation Goes</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-bottom: 40px;">
+                    <div style="background-color: #f8fafc; padding: 20px; border-radius: 10px; border-left: 4px solid #ef4444; text-align: center;">
+                        <span style="font-size: 28px; font-weight: 800; color: #ef4444;">KES 2,500</span>
+                        <p style="margin: 5px 0 0 0; font-size: 15px; font-weight: 700; color: #1e293b;">1 Dry Food Parcel</p>
+                        <p style="margin: 2px 0 0 0; font-size: 13px; color: #64748b;">Feeds an urban family for 2 weeks</p>
+                    </div>
+                    <div style="background-color: #f8fafc; padding: 20px; border-radius: 10px; border-left: 4px solid #10b981; text-align: center;">
+                        <span style="font-size: 28px; font-weight: 800; color: #10b981;">KES 5,000</span>
+                        <p style="margin: 5px 0 0 0; font-size: 15px; font-weight: 700; color: #1e293b;">Mental Health Outreaches</p>
+                        <p style="margin: 2px 0 0 0; font-size: 13px; color: #64748b;">Funds 1 community peer-counseling circle</p>
+                    </div>
