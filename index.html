@@ -49,10 +49,10 @@
         <h2 style="font-size: 32px; color: #0f172a; margin-bottom: 15px; font-weight: 800;">The 9 Pillars of Our Work</h2>
         <p style="color: #64748b; font-size: 18px; margin-bottom: 40px; max-width: 700px; margin-left: auto; margin-right: auto;">Our comprehensive structural framework driving targeted resource distribution, social justice, and urban community resilience.</p>
 
-        <!-- THE 9 PILLARS GRID SECTION -->
-        <div style="text-align: left; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-bottom: 60px;"> 
-            <!-- Pillar 1 Card: COMMUNITY SUPPORT WITH ACCORDIONS -->
-            <div style="background: #ffffff; padding: 30px; border-radius: 10px; border: 1px solid #e2e8f0; border-top: 5px solid #ef4444; display: flex; flex-direction: column; justify-content: space-between;">
+        <!-- DEFENSIVE FLEXBOX FLOW CONTAINER FOR ALL 9 PILLARS -->
+        <div style="text-align: left; display: flex; flex-wrap: wrap; gap: 25px; justify-content: center; margin-bottom: 60px;"> 
+            <!-- Pillar 1 Card -->
+            <div style="background: #ffffff; padding: 30px; border-radius: 10px; border: 1px solid #e2e8f0; border-top: 5px solid #ef4444; width: 100%; max-width: 340px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between;">
                 <div>
                     <h3 style="color: #ef4444; margin-top: 0; font-size: 22px; font-weight: 700; margin-bottom: 12px; font-family: sans-serif;">1. Community Support</h3>
                     <p style="color: #475569; margin-bottom: 20px; font-size: 15px; line-height: 1.6; font-family: sans-serif;">Providing food security distributions, clean clothing networks, and critical emergency response resources to families navigating urgent financial crises and systemic hardships.</p>
@@ -92,7 +92,7 @@
             </div>
 
             <!-- Pillar 2 Card -->
-            <div style="background: #ffffff; padding: 30px; border-radius: 10px; border: 1px solid #e2e8f0; border-top: 5px solid #f59e0b; display: flex; flex-direction: column; justify-content: space-between;">
+            <div style="background: #ffffff; padding: 30px; border-radius: 10px; border: 1px solid #e2e8f0; border-top: 5px solid #f59e0b; width: 100%; max-width: 340px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between;">
                 <div>
                     <h3 style="color: #f59e0b; margin-top: 0; font-size: 22px; font-weight: 700;">2. Education & Skills</h3>
                     <p style="color: #475569; margin-bottom: 15px; font-size: 15px; line-height: 1.5;">Hosting structured community classes, digital literacy bootcamps, and professional vocational training sessions aimed at equipping marginalized individuals to secure sustainable careers.</p>
@@ -101,7 +101,7 @@
             </div>
 
             <!-- Pillar 3 Card -->
-            <div style="background: #ffffff; padding: 30px; border-radius: 10px; border: 1px solid #e2e8f0; border-top: 5px solid #06b6d4; display: flex; flex-direction: column; justify-content: space-between;">
+            <div style="background: #ffffff; padding: 30px; border-radius: 10px; border: 1px solid #e2e8f0; border-top: 5px solid #06b6d4; width: 100%; max-width: 340px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between;">
                 <div>
                     <h3 style="color: #06b6d4; margin-top: 0; font-size: 22px; font-weight: 700;">3. Advocacy & Human Rights</h3>
                     <p style="color: #475569; margin-bottom: 15px; font-size: 15px; line-height: 1.5;">Standing firmly at the forefront of social justice to protect fundamental human rights, promote legal equality, amplify vulnerable voices, and lobby for institutional policy improvements.</p>
@@ -109,8 +109,8 @@
                 <div style="background-color: #ecfeff; color: #0891b2; font-size: 12px; font-weight: 700; padding: 6px 12px; border-radius: 4px; display: inline-block; width: max-content;">⚖️ 3 Tracks Active</div>
             </div>
 
-            <!-- Pillar 4 Card: HEALTH & WELLNESS WITH EXPANDABLE DASHBOARD -->
-            <div style="background: #ffffff; padding: 30px; border-radius: 10px; border: 1px solid #e2e8f0; border-top: 5px solid #10b981; box-shadow: 0 10px 15px -3px rgba(16, 185, 129, 0.05); display: flex; flex-direction: column; justify-content: space-between;">
+            <!-- Pillar 4 Card -->
+            <div style="background: #ffffff; padding: 30px; border-radius: 10px; border: 1px solid #e2e8f0; border-top: 5px solid #10b981; width: 100%; max-width: 340px; box-sizing: border-box; box-shadow: 0 10px 15px -3px rgba(16, 185, 129, 0.05); display: flex; flex-direction: column; justify-content: space-between;">
                 <div>
                     <h3 style="color: #10b981; margin-top: 0; font-size: 22px; font-weight: 700; margin-bottom: 12px;">4. Health & Wellness</h3>
                     <p style="color: #475569; margin-bottom: 20px; font-size: 15px; line-height: 1.6;">Deploying mobile medical clinics to deliver essential primary healthcare access while running stigma-free mental health support spaces, community counseling networks, and psychological wellness training.</p>
@@ -139,8 +139,7 @@
                             <summary style="font-weight: 700; font-size: 13px; color: #1e293b; list-style: none; display: flex; justify-content: space-between; align-items: center; outline: none;">
                                 <span>📊 Field Assessment Matrix</span>
                                 <span style="font-size: 11px; color: #94a3b8;">▼</span>
-                            </summary>
-                            <!-- DONATION & FINANCIAL TRACKING SECTION -->
+                                <!-- DONATION & FINANCIAL TRACKING SECTION -->
         <div id="donation-matrix" style="padding: 40px; background-color: #ffffff; border-radius: 12px; border: 1px solid #e2e8f0; margin-bottom: 40px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02); text-align: left;">
             <h3 style="font-size: 20px; color: #0f172a; margin-top: 0; margin-bottom: 25px; font-weight: 800; text-align: center; text-transform: uppercase; letter-spacing: 0.5px;">Where Your Donation Goes</h3>
             
@@ -189,7 +188,7 @@
                         <h4 style="margin: 0 0 12px 0; color: #166534; font-size: 18px; font-weight: 800; border-bottom: 2px solid #22c55e; padding-bottom: 6px; display: inline-block; font-family: sans-serif;">Direct Programmatic Support</h4>
                         <p style="margin: 0 0 16px 0; color: #1e3a1e; font-size: 14px; line-height: 1.5; font-weight: 500; font-family: sans-serif;">Support our field matrix operations and community psychiatric safety tracks via M-Pesa mobile transfer directly to our official Custodian and Program Coordinator:</p>
                     </div>
-                    <div style="display: grid; grid-template-columns: auto 1fr; gap: 10px 16px; font-size: 14px; color: #1e293b; background: #ffffff; padding: 16px; border-radius: 8px; border: 1px solid #bbf7d0; box-shadow: 0 2px 4px rgba(0,0,0,0.02); font-family: sans-serif;">
+                    <div style="display: grid; grid-template-columns: auto 1fr; gap: 10px 16px; font-size: 14px; color: #1e293b; background: #ffffff; padding: 16px; border-radius: 8px; border: 1px solid #bbf7d0; box-shadow: 0 2px 4px rgba(0,0,0,0.02);">
                         <strong>M-Pesa Number:</strong> <span style="font-family: monospace; font-size: 16px; color: #16a34a; font-weight: 900; letter-spacing: 0.5px;">0727835122</span>
                         <strong>Registered Name:</strong> <span style="text-transform: uppercase; font-weight: 700; color: #0f172a; font-size: 13px;">EDWIN ODAWO</span>
                     </div>
