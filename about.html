@@ -5,80 +5,114 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us | LUF Network</title>
     <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; }
-        h1, h2, h3 { color: #2c3e50; }
-        .timeline { border-left: 4px solid #3498db; padding-left: 20px; margin: 20px 0; }
-        .timeline-item { margin-bottom: 20px; position: relative; }
-        .timeline-item::before { content: "•"; color: #3498db; font-size: 24px; position: absolute; left: -26px; top: -5px; }
-        .year { font-weight: bold; color: #3498db; }
-        .box-section { background: #f8f9fa; padding: 15px; border-radius: 5px; margin: 20px 0; border-left: 4px solid #2c3e50; }
+        :root { --primary: #1e3a8a; --secondary: #3b82f6; --dark: #1f2937; --light: #f9fafb; --accent: #2563eb; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.7; color: var(--dark); max-width: 1000px; margin: 0 auto; padding: 0 20px; background-color: #ffffff; }
+        
+        /* Professional Navigation Header */
+        header { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; border-bottom: 2px solid #e5e7eb; margin-bottom: 40px; }
+        .logo-area { display: flex; align-items: center; gap: 12px; }
+        .logo-icon { width: 40px; height: 40px; background: var(--primary); color: white; display: flex; align-items: center; justify-content: center; font-weight: bold; border-radius: 8px; font-size: 1.2rem; }
+        .logo-text { font-size: 1.4rem; font-weight: 800; color: var(--primary); letter-spacing: -0.5px; }
+        nav a { text-decoration: none; color: var(--dark); font-weight: 500; margin-left: 20px; transition: color 0.2s; }
+        nav a:hover, nav a.active { color: var(--accent); }
+
+        /* Typography & Layout elements */
+        h1, h2, h3 { color: var(--primary); font-weight: 700; }
+        h2 { border-bottom: 2px solid #eff6ff; padding-bottom: 8px; margin-top: 40px; font-size: 1.75rem; }
+        .intro-lead { font-size: 1.15rem; color: #4b5563; margin-bottom: 30px; }
+        
+        /* Modern Chronological Timeline */
+        .modern-timeline { position: relative; border-left: 3px solid #dbeafe; padding: 10px 0 20px 30px; margin: 30px 0 30px 10px; }
+        .timeline-block { position: relative; margin-bottom: 35px; }
+        .timeline-block::before { content: ""; position: absolute; left: -38px; top: 6px; width: 12px; height: 12px; border-radius: 50%; background: var(--secondary); border: 3px solid #fff; box-shadow: 0 0 0 3px #dbeafe; }
+        .timeline-date { font-weight: 700; color: var(--accent); font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px; }
+        .timeline-title { font-weight: 700; font-size: 1.2rem; color: var(--primary); margin: 0 0 8px 0; }
+        
+        /* Broad-based Activity Profiles */
+        .grid-cards { display: grid; grid-template-columns: 1fr; gap: 20px; margin-top: 25px; }
+        @media(min-width: 768px) { .grid-cards { grid-template-columns: repeat(3, 1fr); } }
+        .profile-card { background: var(--light); padding: 25px; border-radius: 8px; border-top: 4px solid var(--primary); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+        .profile-card h3 { margin-top: 0; font-size: 1.25rem; }
     </style>
 </head>
 <body>
 
+    <!-- Institutional Top Navigation Block -->
     <header>
-        <h1>Local Urban Forum Network (LUF Network)</h1>
+        <div class="logo-area">
+            <div class="logo-icon">L</div>
+            <div class="logo-text">LUF Network</div>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html" class="active">About Us</a>
+            <a href="projects.html">Projects & Feed</a>
+        </nav>
     </header>
 
     <main>
         <section>
             <h2>Our Heritage & Legacy</h2>
-            <p>The Local Urban Forum Network (LUF Network) was founded on the frontlines of grassroots community advocacy in Nairobi. Established to serve as a voice for the vulnerable, our movement addresses structural imbalances, improves public resource access, and drives socio-economic progression across informal settlements.</p>
-            <p>Over the years, our operational reach has expanded from localized community barazas into strategic institutional partnerships. By maintaining a lean, horizontal, and transparent management framework, we have built absolute accountability with international grant administrators and national regulatory mechanisms alike.</p>
-            <p>Today, our specialized focus areas span civil rights advocacy, resource mobilization, and transformative health equity—typified by the upcoming LUF-Neurotorium Initiative. We remain fiercely dedicated to turning institutional opportunities into sustainable, zero-cost protections for the communities we safeguard.</p>
+            <p class="intro-lead">The Local Urban Forum Network (LUF Network) was founded on the frontlines of grassroots community advocacy in Nairobi. Established to serve as a decisive voice for vulnerable urban populations, our movement actively dismantles systemic structural imbalances, protects civil rights, and drives equitable socio-economic progression across underserved informal settlements.</p>
+            <p>Over decades of responsive fieldwork, our scope has evolved from localized community barazas into highly strategic institutional partnerships. By maintaining a highly agile, horizontal, and strictly transparent management matrix, we have built absolute financial and structural accountability trusted by international grant administrators, municipal health directorates, and regulatory state mechanisms alike.</p>
+            <p>Today, our specialized capabilities span civic protections, resource mobilization, and transformative clinical health equity. This is epitomized by our proactive operational pivot to address heavily masked neuropsychiatric crises within slum environments. We remain fiercely dedicated to turning institutional opportunities into sustainable, zero-cost protections for the communities we safeguard.</p>
         </section>
         <section>
-            <h2>Chronological Evolution (2003 – Present)</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <span class="year">2003 – 2005: The Foundation</span>
-                    <p>Began as a grassroots movement holding localized community barazas (open-air forums) in Nairobi's informal settlements. The primary focus was organizing community voices to demand basic administrative recognition and civil spaces.</p>
+            <h2>Chronological Evolution</h2>
+            <div class="modern-timeline">
+                <div class="timeline-block">
+                    <div class="timeline-date">2003 – 2005</div>
+                    <h3 class="timeline-title">Grassroots Mobilization & Rights Activation</h3>
+                    <p>Began as a responsive community movement holding open-air barazas across Nairobi's informal settlements. Operations focused on unifying resident actions to secure baseline administrative recognition and shield local populations from unlawful civil exclusions.</p>
                 </div>
-                <div class="timeline-item">
-                    <span class="year">2006 – 2009: Structural Responses</span>
-                    <p>Expanded from open forums into structured human rights tracking. LUF began establishing ward-level monitoring loops to document public resource gaps and legal literacy deficits among marginalized urban populations.</p>
+                <div class="timeline-block">
+                    <div class="timeline-date">2006 – 2009</div>
+                    <h3 class="timeline-title">Structural Tracking Loops & Legal Literacy</h3>
+                    <p>Scaled from basic community forums into formal data-tracking units. LUF launched ward-level monitoring frameworks to comprehensively map public utility deficits, municipal resource distribution gaps, and acute legal protection needs among marginalized residents.</p>
                 </div>
-                <div class="timeline-item">
-                    <span class="year">2010 – 2014: Formal Alignment & Expansion</span>
-                    <p>Aligned operations with the new Constitution of Kenya (2010) and the NGOs Co-ordination Act. This era saw the creation of formal youth mentorship tracks and early resource mobilization networks to back legal protection frameworks.</p>
+                <div class="timeline-block">
+                    <div class="timeline-date">2010 – 2014</div>
+                    <h3 class="timeline-title">Constitutional Realignment & Systemic Expansion</h3>
+                    <p>Formally integrated organizational structures under the NGOs Co-ordination Act and aligned core advocacy mandates with the newly promulgated Constitution of Kenya (2010). This period marked the launch of institutional youth mentorship frameworks and expanded legal tracking networks.</p>
                 </div>
-                <div class="timeline-item">
-                    <span class="year">2015 – 2025: Institutional Resilience</span>
-                    <p>Solidified absolute transparency mechanisms for international partnerships. The network scaled its zero-cost equipment matching models and built strategic bridges between local communities and sub-county healthcare administrators.</p>
+                <div class="timeline-block">
+                    <div class="timeline-date">2015 – 2025</div>
+                    <h3 class="timeline-title">Institutional Partnership & Equipment Grants</h3>
+                    <p>Established rigorous transparency and financial reporting loops to manage international funding channels. Effectively scaled localized resource matching systems, securing zero-cost specialized medical equipment allocations and direct cross-linkages with sub-county health administrators.</p>
                 </div>
-                <div class="timeline-item">
-                    <span class="year">2026 – Present: The Decentralized Pivot</span>
-                    <p>Formally adopted the "Decentralized Hub Framework" (Path C). Under this model, operations bypass centralized national bottlenecks to deliver direct, point-of-care neuro-psychiatric screening toolkits and capacity training across Mathare North, Huruma, and Baba Dogo health centres.</p>
+                <div class="timeline-block">
+                    <div class="timeline-date">2026 – Present</div>
+                    <h3 class="timeline-title">Decentralized Healthcare Transition (Path C)</h3>
+                    <p>In response to administrative shifts at referral facilities, LUF permanently activated its Decentralized Hub Framework. Current operations bypass national institutional delays by embedding diagnostic toolkits, Mobile Mastery Kits, and clinical capacity programs straight into ward clinics at Mathare North, Huruma, and Baba Dogo.</p>
                 </div>
             </div>
         </section>
-        <section class="box-section">
+        <section>
             <h2>Core Institutional Objectives</h2>
-            <ol>
-                <li>
-                    <strong>Grassroots Human Rights Protection</strong>
-                    <p>Empowering marginalized urban populations through legal literacy open forums, civil advocacy tracking loops, and structural representation at municipal administrative blocks.</p>
-                </li>
-                <li>
-                    <strong>Zero-Cost Healthcare Access Alignment</strong>
-                    <p>Securing strict legal safeguards and specialized equipment grants to lock in zero financial liability for referral facilities serving low-income sectors.</p>
-                </li>
-                <li>
-                    <strong>Socio-Economic Youth Mentorship</strong>
-                    <p>Driving micro-enterprise tracks and decentralized technical training circuits to anchor financial autonomy for vulnerability cohorts across informal settlements.</p>
-                </li>
-            </ol>
+            <div class="grid-cards">
+                <div class="profile-card">
+                    <h3>1. Civic & Human Rights Protection</h3>
+                    <p>Empowering marginalized urban populations through legal literacy open clinics, permanent tracking loops for civil violations, and professional structural advocacy at municipal and sub-county governance boards.</p>
+                </div>
+                <div class="profile-card">
+                    <h3>2. Zero-Cost Healthcare Access</h3>
+                    <p>Securing binding legal safeguards and targeted medical equipment grants to ensure absolute zero financial liability for vulnerable cohorts navigating regional healthcare channels and ward clinics.</p>
+                </div>
+                <div class="profile-card">
+                    <h3>3. Socio-Economic Youth Mentorship</h3>
+                    <p>Incubating sustainable micro-enterprise pathways, technical capacity training arrays, and community leadership tracks to secure long-term financial self-reliance for vulnerable urban youth cohorts.</p>
+                </div>
+            </div>
         </section>
 
-        <section class="box-section">
-            <h2>Legal & Compliance Framework</h2>
-            <p>LUF Network operates in strict compliance with the NGOs Co-ordination Act and relevant human rights mandates within the Republic of Kenya. All project deployments, asset transfers, and operational cycles are publicly logged and audited to guarantee pristine transparency for community stakeholders, facility managers, and state registries.</p>
+        <section style="margin: 40px 0; padding: 25px; border-left: 4px solid var(--accent); background: #eff6ff; border-radius: 0 8px 8px 0;">
+            <h3 style="margin-top:0; color: var(--primary);">Legal & Compliance Matrix</h3>
+            <p style="margin-bottom:0; font-size:0.95rem; color:#374151;">The Local Urban Forum Network operates under the strict regulatory governance of the NGOs Co-ordination Act within the Republic of Kenya. All program workflows, distributed resource allocations, and multi-year auditing processes are fully documented inside our public-facing ledger to guarantee absolute structural integrity for community stakeholders, facility managers, and international partners.</p>
         </section>
     </main>
 
-    <footer>
-        <hr>
-        <p>&copy; 2026 Local Urban Forum Network (LUF Network). Public Transparency Archive.</p>
+    <footer style="margin-top: 60px; padding: 20px 0; border-top: 1px solid #e5e7eb; text-align: center; font-size: 0.9rem; color: #6b7280;">
+        <p>&copy; 2026 Local Urban Forum Network (LUF Network) • Global Transparency & Public Archive Registry</p>
     </footer>
 
 </body>
