@@ -3,102 +3,165 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Projects | LUF NETWORK</title>
-</head>
-<body style="font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; background-color: #f8fafc; color: #1e293b; line-height: 1.6;">
-
-    <!-- TOP NAVIGATION BAR -->
-    <!-- TOP NAVIGATION BAR (PRE-SYNCHRONISED & OPTIMIZED) -->
-    <header style="background-color: #ffffff; padding: 15px 40px; border-bottom: 1px solid #e2e8f0; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 8px rgba(0,0,0,0.04); position: sticky; top: 0; z-index: 1000; font-family: 'Segoe UI', Arial, sans-serif;">
-        <div style="display: flex; align-items: center; gap: 50px;">
-            <a href="index.html" style="display: block; text-decoration: none;">
-                <img src="logo.png.jpg" alt="LUF NETWORK Logo" style="height: 95px; width: auto; object-fit: contain; display: block;">
-            </a>
-            <nav style="display: flex; align-items: center; gap: 35px;">
-                <a href="index.html" style="color: #1e293b; text-decoration: none; font-weight: 700; font-size: 17px; padding-bottom: 6px; letter-spacing: 0.5px;">Home</a>
-                <a href="about.html" style="color: #1e293b; text-decoration: none; font-weight: 700; font-size: 17px; letter-spacing: 0.5px;">About Us</a>
-                <a href="index.html#donation-matrix" style="color: #1e293b; text-decoration: none; font-weight: 700; font-size: 17px; letter-spacing: 0.5px;">Our Projects</a>
-                <a href="partners.html" style="color: #1e293b; text-decoration: none; font-weight: 700; font-size: 17px; letter-spacing: 0.5px;">Partners & Synergy</a>
-            </nav>
-        </div>
-        <a href="mailto:solidaritykenya@yahoo.com" style="background-color: #2563eb; color: white; text-decoration: none; padding: 12px 24px; border-radius: 8px; font-weight: 700; font-size: 15px; box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.2); letter-spacing: 0.5px;">Get In Touch</a>
-    </header>
-
-    <!-- MAIN CONTAINER -->
-    <main style="max-width: 900px; margin: 0 auto; padding: 60px 20px;">
+    <title>Our Projects | LUF Network</title>
+    <style>
+        :root { --primary: #1e3a8a; --secondary: #3b82f6; --dark: #1f2937; --light: #f9fafb; --accent: #2563eb; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.7; color: var(--dark); max-width: 1100px; margin: 0 auto; padding: 0 20px; background-color: #ffffff; }
         
-        <h1 style="font-size: 42px; color: #0f172a; margin-bottom: 10px; font-weight: 800; text-align: center;">Our Projects & Impact</h1>
-        <p style="color: #64748b; font-size: 18px; margin-bottom: 50px; text-align: center; max-width: 600px; margin-left: auto; margin-right: auto;">
-            A visual timeline of how Local Urban Forum Network turns advocacy, health, and sustainability into real-world community solutions.
-        </p>
+        /* Institutional Header Banner Section */
+        .brand-header-container { display: flex; flex-direction: column; border-bottom: 3px solid var(--primary); padding-bottom: 15px; margin-bottom: 40px; margin-top: 15px; }
+        .banner-row { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; padding: 10px 0; }
+        .org-branding-box { display: flex; flex-direction: column; max-width: 450px; }
+        .logo-graphics-sub { display: flex; align-items: center; gap: 15px; margin-top: 15px; }
+        
+        /* Contact Block Right-Aligned */
+        .registry-contact-block { font-size: 0.78rem; font-family: Arial, sans-serif; line-height: 1.35; color: #4b5563; border-left: 2px solid #cbd5e1; padding-left: 15px; max-width: 320px; text-align: left; }
+        .registry-contact-block strong { color: var(--primary); }
+        .badge-capsule { display: inline-block; background: #854d0e; color: #fff; font-size: 0.75rem; font-weight: 700; padding: 4px 8px; border-radius: 4px; text-transform: uppercase; }
 
-        <!-- TIMELINE CONTAINER -->
-        <div style="position: relative; border-left: 3px solid #cbd5e1; padding-left: 30px; margin-left: 20px;">
+        /* Navigation Grid */
+        .navigation-grid-row { display: flex; justify-content: flex-end; align-items: center; gap: 25px; margin-top: 20px; background: var(--light); padding: 12px 20px; border-radius: 6px; box-shadow: inset 0 1px 2px rgba(0,0,0,0.05); }
+        .navigation-grid-row a { text-decoration: none; color: #374151; font-weight: 600; font-size: 0.95rem; text-transform: capitalize; position: relative; padding-bottom: 4px; transition: color 0.2s; }
+        .navigation-grid-row a:hover { color: var(--accent); }
+        .navigation-grid-row a.active { color: var(--accent); font-weight: 700; }
+        .navigation-grid-row a.active::after { content: ""; position: absolute; bottom: 0; left: 0; width: 100%; height: 3px; background: var(--accent); border-radius: 2px; }
+    </style>
+</head>
+<body>
 
-            <!-- Timeline Entry 1: Community Support -->
-            <div style="margin-bottom: 50px; position: relative;">
-                <div style="position: absolute; width: 16px; height: 16px; background-color: #ef4444; border-radius: 50%; left: -39px; top: 6px; border: 4px solid #f8fafc;"></div>
-                <span style="background-color: #fee2e2; color: #ef4444; font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 20px; text-transform: uppercase;">Pillar 1: Relief Log</span>
-                <h3 style="font-size: 24px; color: #0f172a; margin: 10px 0 5px 0;">Emergency Food & Welfare Distribution</h3>
-                <p style="color: #64748b; font-size: 14px; margin-top: 0; font-weight: 600;">Active Deployment</p>
-                <p style="color: #334155; font-size: 16px; margin-bottom: 20px;">
-                    Providing bulk dry goods, fresh produce channels, and clean clothing parcels to urban households dealing with severe economic disruptions.
-                </p>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-top: 20px; text-align: left;">
-                    <div style="border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-                        <img src="distribution.png.jpg" alt="Food Relief Supply" style="width: 100%; height: 220px; object-fit: cover; display: block;">
+    <!-- Standardized Navigation Header Frame (Our Projects Active) -->
+    <div class="brand-header-container">
+        <div class="banner-row">
+            <div class="org-branding-box">
+                <div style="font-family: 'Segoe UI', Arial, sans-serif; margin: 0; line-height: 1.2; text-align: left;">
+                    <span style="font-size: 2.5rem; font-weight: 800; color: #1b5e20; letter-spacing: -0.5px; text-transform: uppercase;">Local Urban Forum</span><br>
+                    <span style="font-size: 1.3rem; font-weight: 700; color: #4b5563; letter-spacing: 4px; text-transform: uppercase;">N E T W O R K</span>
+                </div>
+                <div class="logo-graphics-sub">
+                    <div style="background: transparent; display: inline-block;">
+                        <img src="emblem.png" alt="LUF Network Emblem" style="height: 75px; width: auto; display: block; object-fit: contain;">
                     </div>
-                    <div style="border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-                        <img src="project-relief.png.jpg" alt="Community Relief Distribution" style="width: 100%; height: 220px; object-fit: cover; display: block;">
-                    </div>
+                    <span class="badge-capsule" style="background: #1e3a8a; color: #fff;">LUF - Network</span>
+                </div>
+            </div>
+            
+            <div class="registry-contact-block">
+                <span class="badge-capsule" style="background: #854d0e; font-weight: 900; letter-spacing: 0.5px; display: inline-block; margin-bottom: 6px;">Official Secretariat</span><br>
+                P. O. BOX 34899-00600 - NAIROBI<br>
+                <strong>Phone:</strong> 0727835122 / 0733582084<br>
+                <strong>Email:</strong> solidaritykenya@yahoo.com<br>
+                <strong>Website:</strong> lufnetwork.github.io
+            </div>
+        </div>
+
+        <div class="navigation-grid-row">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="management.html">Management</a>
+            <a href="projects.html" class="active">Our Projects</a>
+            <a href="partners.html">Partners & Synergy</a>
+        </div>
+    </div>
+    <main style="max-width: 1100px; margin: 0 auto; padding: 40px 20px; display: block;">
+    <!-- ==================== LIVE ADVOCACY FEED CONTAINER ==================== -->
+    <section style="margin-bottom: 50px;">
+        
+        <!-- ADVOCACY FEED ENTRY: AUGUST 26, 2026 -->
+        <div style="background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 30px; margin-bottom: 30px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02); text-align: left;">
+            <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #f1f5f9; padding-bottom: 15px; margin-bottom: 20px; flex-wrap: wrap; gap: 10px;">
+                <div>
+                    <span style="background-color: #ef4444; color: white; font-size: 11px; font-weight: 800; padding: 4px 10px; border-radius: 50px; text-transform: uppercase; letter-spacing: 0.5px;">Programmatic Update</span>
+                    <h3 style="font-size: 22px; color: #0f172a; margin: 8px 0 0 0; font-weight: 800;">Multi-Sectoral Health Equity & Tracking Loops</h3>
+                </div>
+                <div style="color: #64748b; font-size: 14px; font-weight: 700; background-color: #f8fafc; padding: 6px 14px; border-radius: 6px; border: 1px solid #e2e8f0;">
+                    📅 August 26, 2026
                 </div>
             </div>
 
-            <!-- Timeline Entry 2: Education & Skills (CLEAN FIX DEPLOYED) -->
-            <div style="margin-bottom: 50px; position: relative;">
-                <div style="position: absolute; width: 16px; height: 16px; background-color: #f59e0b; border-radius: 50%; left: -39px; top: 6px; border: 4px solid #f8fafc;"></div>
-                <span style="background-color: #fef3c7; color: #d97706; font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 20px; text-transform: uppercase;">Pillar 2: Training Log</span>
-                <h3 style="font-size: 24px; color: #0f172a; margin: 10px 0 5px 0;">Community Literacy & Vocational Classes</h3>
-                <p style="color: #64748b; font-size: 14px; margin-top: 0; font-weight: 600;">Quarterly Sessions</p>
-                <p style="color: #334155; font-size: 16px; margin-bottom: 15px;">
-                    Running localized baseline accounting, job readiness seminars, and foundational digital skill clinics to empower youths and adults toward stable career pathways.
-                </p>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-top: 20px; text-align: left;">
-                    <div style="border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-                        <img src="vocational-training.jpg" alt="LUF NETWORK Vocational Literacy Session" style="width: 100%; height: 220px; object-fit: cover; display: block;">
-                    </div>
-                    <div style="border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05); background-color: #fffbeb; position: relative; height: 220px; border: 1px dashed #fcd34d;">
-                        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; color: #b45309; width: 85%;">
-                            <span style="font-size: 26px;">📊</span>
-                            <p style="margin: 5px 0 0 0; font-size: 13px; font-weight: 700; color: #78350f;">[ Livelihood Metrics ]</p>
-                            <p style="margin: 2px 0 0 0; font-size: 11px; color: #d97706;">LMF Tracking Active</p>
-                        </div>
-                    </div>
+            <p style="color: #475569; font-size: 15px; line-height: 1.6; margin-bottom: 25px; background-color: #f8fafc; padding: 12px 18px; border-left: 4px solid #64748b; border-radius: 4px;">
+                <strong>Operational Brief:</strong> Multi-Sectoral Health Equity & Grassroots Tracking Frameworks<br>
+                <strong>Current Focus:</strong> LUF-Neurotorium Phase 1 Preparations & Ward-Level Logistics Sync
+            </p>
+
+            <div style="display: grid; gap: 25px;">
+                <!-- PROGRAM 1 -->
+                <div style="border-left: 4px solid #16a34a; padding-left: 15px;">
+                    <h4 style="margin: 0 0 4px 0; font-size: 16px; color: #16a34a; font-weight: 700; text-transform: uppercase;">🟢 Program 1: Clinical Integrity & Institutional Asset Mapping</h4>
+                    <span style="font-size: 13px; color: #64748b; font-style: italic; display: block; margin-bottom: 8px;">Facilitator: Dr. Olivia Onditi (Health & Wellness Lead)</span>
+                    <p style="margin: 0 0 8px 0; font-size: 15px; color: #1e293b;"><strong>Primary Activity:</strong> Formulating technical clinical protocols and equipment safety compliance parameters for the upcoming LUF-Neurotorium Initiative (2027–2030).</p>
+                    <ul style="margin: 0; padding-left: 20px; color: #475569; font-size: 14px; line-height: 1.5;">
+                        <li style="margin-bottom: 4px;">Synchronizing project tracking indicators with Kenya National Mental Health Action Plan guidelines.</li>
+                        <li style="margin-bottom: 4px;">Reviewing technical specifications of incoming mobile screening kits to ensure data security standards.</li>
+                        <li>Drafting a clinical triage guide for field staff handling community referrals.</li>
+                    </ul>
+                </div>
+
+                <!-- PROGRAM 2 -->
+                <div style="border-left: 4px solid #2563eb; padding-left: 15px;">
+                    <h4 style="margin: 0 0 4px 0; font-size: 16px; color: #2563eb; font-weight: 700; text-transform: uppercase;">🔵 Program 2: Decentralized Clinic Logistical Sync</h4>
+                    <span style="font-size: 13px; color: #64748b; font-style: italic; display: block; margin-bottom: 8px;">Facilitator: Oliver Erupe (Director of Field Operations)</span>
+                    <p style="margin: 0 0 8px 0; font-size: 15px; color: #1e293b;"><strong>Primary Activity:</strong> Conducting site compatibility reviews and field tracking loops across target Level 2 and Level 3 public healthcare facilities.</p>
+                    <ul style="margin: 0; padding-left: 20px; color: #475569; font-size: 14px; line-height: 1.5;">
+                        <li style="margin-bottom: 4px;">Setting up coordination briefings with facility heads at Mathare North and Huruma Health Centres to review storage safety.</li>
+                        <li style="margin-bottom: 4px;">Organising ward-level logistics huddles to pre-onboard community health promoters (CHPs) for mobile outreach work.</li>
+                        <li>Mapping localized geographical clusters to design efficient transit paths for mobile hardware kits.</li>
+                    </ul>
+                </div>
+
+                <!-- PROGRAM 3 -->
+                <div style="border-left: 4px solid #ca8a04; padding-left: 15px;">
+                    <h4 style="margin: 0 0 4px 0; font-size: 16px; color: #ca8a04; font-weight: 700; text-transform: uppercase;">🟡 Program 3: Secretariat Administrative & Regulatory Alignment</h4>
+                    <span style="font-size: 13px; color: #64748b; font-style: italic; display: block; margin-bottom: 8px;">Facilitator: Edwin Odawo (Executive Director)</span>
+                    <p style="margin: 0 0 8px 0; font-size: 15px; color: #1e293b;"><strong>Primary Activity:</strong> Overseeing institutional compliance updates and data structural divisions within the LUF Network digital registry.</p>
+                    <ul style="margin: 0; padding-left: 20px; color: #475569; font-size: 14px; line-height: 1.5;">
+                        <li style="margin-bottom: 4px;">Separating public Heritage & Legacy Framework from internal Governance Pages to ensure pristine transparency for state and donor audits.</li>
+                        <li style="margin-bottom: 4px;">Finalizing transmittal briefs, project data folders, and institutional letter templates for upcoming municipal presentations.</li>
+                        <li>Formatting an Excel-compatible centralized activity log to streamline data collection for the 2026 Annual Progress Report.</li>
+                    </ul>
                 </div>
             </div>
+        </div>
 
-            <!-- Timeline Entry 3: Health & Wellness -->
-            <div style="margin-bottom: 50px; position: relative;">
-                <div style="position: absolute; width: 16px; height: 16px; background-color: #10b981; border-radius: 50%; left: -39px; top: 6px; border: 4px solid #f8fafc;"></div>
-                <span style="background-color: #d1fae5; color: #059669; font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 20px; text-transform: uppercase;">Pillar 4: Wellness Log</span>
-                <h3 style="font-size: 24px; color: #0f172a; margin: 10px 0 5px 0;">Mobile Primary Health & Counseling Camps</h3>
-                <p style="color: #64748b; font-size: 14px; margin-top: 0; font-weight: 600;">Monthly Outreach</p>
-                <p style="color: #334155; font-size: 16px; margin-bottom: 15px;">
-                    Organizing free medical checkups, primary care access networks, and safe spaces for group psychological counseling to break down traditional mental health stigmas.
-                </p>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 20px; text-align: left; align-items: start;">
-                    <div style="border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.08); background-color: #f1f5f9; height: 420px;">
-                        <img src="health-portrait.jpg.jpg" alt="LUF NETWORK Mobile Counseling Outreach" style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;">
-                    </div>
-                    <div style="border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05); background-color: #faf5ff; border: 1px dashed #d8b4fe; padding: 30px; height: 358px; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
-                        <span style="font-size: 36px; margin-bottom: 10px;">🏥</span>
-                        <h4 style="margin: 0 0 8px 0; font-size: 16px; font-weight: 800; color: #581c87;">[ Clinical Referral Logistics ]</h4>
-                        <p style="margin: 0; font-size: 13px; color: #a855f7; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase;">Operational Tracking Active</p>
-                        <p style="margin: 15px 0 0 0; font-size: 13px; color: #6b21a8; line-height: 1.5; font-style: italic;">Field workers utilize rapid-risk assessment checklists during this tracker layer to coordinate secondary mental health case intake flows seamlessly.</p>
-                    </div>
-                </div>
+    </section>
+    <!-- ==================== CORE OPERATIONAL PILLARS ==================== -->
+    <section style="margin-bottom: 40px;">
+        
+        <!-- 1. HEALTH EQUITY & CLINICAL NETWORKS -->
+        <div style="background-color: #ffffff; padding: 35px; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px rgba(0,0,0,0.01); margin-bottom: 30px;">
+            <h2 style="font-size: 26px; color: #0f172a; font-weight: 800; margin-top: 0; margin-bottom: 15px; border-left: 5px solid #16a34a; padding-left: 15px;">1. Health Equity & Clinical Networks</h2>
+            <p style="color: #475569; font-size: 16px; line-height: 1.7; margin-bottom: 20px;">
+                Securing structural equity across under-resourced communities through specialized medical hardware grants, institutional referral channels, and capacity building for grassroots healthcare personnel.
+            </p>
+            
+            <div style="background: #f8fafc; padding: 15px 20px; border-radius: 8px; margin-bottom: 10px; border: 1px solid #e2e8f0;">
+                <strong style="color: #1e293b; display: block; font-size: 15px; margin-bottom: 4px;">📁 Targeted Food Security Links</strong>
+                <p style="margin: 0; color: #64748b; font-size: 14px;">Deploying immediate baseline nutritional tracking maps and supply channels across informal settlements to counter severe structural vulnerabilities.</p>
             </div>
+            <div style="background: #f8fafc; padding: 15px 20px; border-radius: 8px; margin-bottom: 10px; border: 1px solid #e2e8f0;">
+                <strong style="color: #1e293b; display: block; font-size: 15px; margin-bottom: 4px;">👕 Clean Clothing Networks</strong>
+                <p style="margin: 0; color: #64748b; font-size: 14px;">Coordinating protective clothing distribution clusters to secure basic physical sanitation safety levels for low-income household dependents.</p>
+            </div>
+            <div style="background: #f8fafc; padding: 15px 20px; border-radius: 8px; border: 1px solid #e2e8f0;">
+                <strong style="color: #1e293b; display: block; font-size: 15px; margin-bottom: 4px;">🚨 Emergency Response Channels</strong>
+                <p style="margin: 0; color: #64748b; font-size: 14px;">Maintaining real-time open-source crisis logging lines to alert facility coordinators regarding immediate hazard developments in field zones.</p>
+            </div>
+        </div>
 
-            <!-- Timeline Entry 4: Sustainability -->
-            <div style="margin-bottom: 50px; position: relative;">
-                <div style="position: absolute; width: 16px; height: 16px; background-color: #22c55e; border-radius: 50%; left: -39px; top: 6px; border: 4px solid #f8fafc;"></div>
+        <!-- 2. EDUCATION & SKILLS -->
+        <div style="background-color: #ffffff; padding: 35px; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px rgba(0,0,0,0.01); margin-bottom: 30px;">
+            <h2 style="font-size: 26px; color: #0f172a; font-weight: 800; margin-top: 0; margin-bottom: 15px; border-left: 5px solid #2563eb; padding-left: 15px;">2. Education & Skills</h2>
+            <p style="color: #475569; font-size: 16px; line-height: 1.7; margin-bottom: 20px;">
+                Hosting structured community classes, digital literacy bootcamps, and professional vocational training sessions aimed at equipping marginalized individuals to secure sustainable careers.
+            </p>
+            <div style="background: #f8fafc; padding: 15px 20px; border-radius: 8px; border: 1px solid #e2e8f0;">
+                <strong style="color: #1e293b; display: block; font-size: 15px; margin-bottom: 4px;">📚 Maternal Wellbeing Literacy</strong>
+                <p style="margin: 0; color: #64748b; font-size: 14px;">Conducting community training forums detailing prenatal safety parameters and nutritional monitoring checklists for field mothers.</p>
+            </div>
+        </div>
+
+    </section>
+
+</main>
+
+</body>
+</html>
