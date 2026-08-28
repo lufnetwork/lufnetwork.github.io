@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Projects | LUF Network</title>
+    <title>Our Projects & Live Feed | LUF Network</title>
     <style>
-        :root { --primary: #1e3a8a; --secondary: #3b82f6; --dark: #1f2937; --light: #f9fafb; --accent: #2563eb; }
+        :root { --primary: #1e3a8a; --secondary: #3b82f6; --dark: #1f2937; --light: #f9fafb; --accent: #2563eb; --green: #1b5e20; }
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.7; color: var(--dark); max-width: 1100px; margin: 0 auto; padding: 0 20px; background-color: #ffffff; }
         
         /* Institutional Header Banner Section */
@@ -25,11 +25,29 @@
         .navigation-grid-row a:hover { color: var(--accent); }
         .navigation-grid-row a.active { color: var(--accent); font-weight: 700; }
         .navigation-grid-row a.active::after { content: ""; position: absolute; bottom: 0; left: 0; width: 100%; height: 3px; background: var(--accent); border-radius: 2px; }
+
+        /* Content Layout Components */
+        main { max-width: 900px; margin: 0 auto; padding: 20px 0; display: block; }
+        h2 { color: var(--primary); border-bottom: 2px solid #eff6ff; padding-bottom: 8px; margin-top: 40px; font-size: 1.75rem; }
+        
+        /* Section 1: Live Feed Component Styling */
+        .live-feed-card { background: #fffbf7; border: 1px solid #fed7aa; border-left: 5px solid #f97316; border-radius: 6px; padding: 20px; margin-bottom: 15px; text-align: left; }
+        
+        /* Section 2: Historical Archive Cards */
+        .archive-card-row { background: #ffffff; border: 1px solid #e2e8f0; border-left: 4px solid #cbd5e1; border-radius: 6px; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; text-align: left; margin-bottom: 12px; }
+        
+        /* Section 3: Master Plan Matrix Table Styles */
+        .matrix-table { width: 100%; border-collapse: collapse; margin-top: 20px; margin-bottom: 20px; font-size: 0.92rem; text-align: left; }
+        .matrix-table th { background-color: var(--primary); color: white; padding: 12px; font-weight: 600; }
+        .matrix-table td { padding: 14px 12px; border-bottom: 1px solid #e2e8f0; vertical-align: top; }
+        .matrix-table tr:nth-child(even) { background-color: var(--light); }
+        .bullet-list { padding-left: 18px; margin: 4px 0; }
+        .bullet-list li { margin-bottom: 4px; }
     </style>
 </head>
 <body>
 
-    <!-- Standardized Navigation Header Frame (Our Projects Active) -->
+    <!-- Standardized Navigation Header Frame -->
     <div class="brand-header-container">
         <div class="banner-row">
             <div class="org-branding-box">
@@ -62,106 +80,122 @@
             <a href="partners.html">Partners & Synergy</a>
         </div>
     </div>
-    <main style="max-width: 1100px; margin: 0 auto; padding: 40px 20px; display: block;">
-    <!-- ==================== LIVE ADVOCACY FEED CONTAINER ==================== -->
-    <section style="margin-bottom: 50px;">
-        
-        <!-- ADVOCACY FEED ENTRY: AUGUST 26, 2026 -->
-        <div style="background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 30px; margin-bottom: 30px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02); text-align: left;">
-            <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #f1f5f9; padding-bottom: 15px; margin-bottom: 20px; flex-wrap: wrap; gap: 10px;">
-                <div>
-                    <span style="background-color: #ef4444; color: white; font-size: 11px; font-weight: 800; padding: 4px 10px; border-radius: 50px; text-transform: uppercase; letter-spacing: 0.5px;">Programmatic Update</span>
-                    <h3 style="font-size: 22px; color: #0f172a; margin: 8px 0 0 0; font-weight: 800;">Multi-Sectoral Health Equity & Tracking Loops</h3>
+
+    <main>
+        <!-- SECTION 1: LIVE ADVOCACY FEED (Breaking News Dashboard) -->
+        <section id="live-breaking-feed">
+            <h2>Live Advocacy Feed</h2>
+            <div class="live-feed-card">
+                <div style="font-size: 0.8rem; font-weight: 700; color: #ea580c; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 5px; display: flex; align-items: center; gap: 8px;">
+                    <span style="width: 8px; height: 8px; background: #ea580c; border-radius: 50%; display: inline-block;"></span> Active Dispatch — Current Operations Log
                 </div>
-                <div style="color: #64748b; font-size: 14px; font-weight: 700; background-color: #f8fafc; padding: 6px 14px; border-radius: 6px; border: 1px solid #e2e8f0;">
-                    📅 August 26, 2026
+                <p style="margin: 5px 0 0 0; font-size: 1.05rem; color: #292524; line-height: 1.5;">
+                    <strong>Path C Formally Deployed (August 2026):</strong> LUF Network has shifted its strategic capacity-building parameters away from national ministry bottlenecks. Under the supervision of Oliver Erupe (Field Operations) and Dr. Olivia Onditi (Health & Wellness Unit), ward-level facility permission routing has been initiated directly via the Nairobi City County Health Department.
+                </p>
+            </div>
+        </section>
+
+        <!-- SECTION 2: FUTURE PROGRAMMATIC UPDATE LOGS (Past Milestones Archive) -->
+        <section id="programmatic-archive-logs" style="margin-bottom: 40px;">
+            <h3 style="color: #4b5563; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1px; font-weight: 700; margin-top: 5px; margin-bottom: 15px;">
+                Historical Operations Registry (Past Milestones)
+            </h3>
+            <div style="display: flex; flex-direction: column; gap: 2px;">
+                
+                <!-- Archive Card Log #001: This houses our past work as we push newer items to the top -->
+                <div class="archive-card-row">
+                    <div style="max-width: 750px;">
+                        <span style="font-size: 0.75rem; font-weight: 700; color: #6b7280; text-transform: uppercase; letter-spacing: 0.5px; display: block; margin-bottom: 4px;">
+                            Log Entry #001 — Wednesday, August 26, 2026
+                        </span>
+                        <p style="margin: 0; font-size: 0.95rem; color: #4b5563; line-height: 1.5;">
+                            Initial clinical asset mapping finalized. Public transparency layout frameworks separated inside repository to simplify eventual 2026 Annual Progress Reporting structures.
+                        </p>
+                    </div>
+                    <span style="font-size: 0.75rem; font-weight: 700; color: #1e3a8a; background: #eff6ff; padding: 4px 10px; border-radius: 4px; text-transform: uppercase;">Archived</span>
+                </div>
+
+                <!-- Future Log Slot Placeholder -->
+                <div style="border: 1px dashed #cbd5e1; border-radius: 6px; padding: 15px; text-align: center; color: #94a3b8; font-size: 0.85rem; font-style: italic; background: #fafafa; margin-top: 5px;">
+                    Awaiting next field operations synchronization dispatch to cycle down...
                 </div>
             </div>
-
-            <p style="color: #475569; font-size: 15px; line-height: 1.6; margin-bottom: 25px; background-color: #f8fafc; padding: 12px 18px; border-left: 4px solid #64748b; border-radius: 4px;">
-                <strong>Operational Brief:</strong> Multi-Sectoral Health Equity & Grassroots Tracking Frameworks<br>
-                <strong>Current Focus:</strong> LUF-Neurotorium Phase 1 Preparations & Ward-Level Logistics Sync
-            </p>
-
-            <div style="display: grid; gap: 25px;">
-                <!-- PROGRAM 1 -->
-                <div style="border-left: 4px solid #16a34a; padding-left: 15px;">
-                    <h4 style="margin: 0 0 4px 0; font-size: 16px; color: #16a34a; font-weight: 700; text-transform: uppercase;">🟢 Program 1: Clinical Integrity & Institutional Asset Mapping</h4>
-                    <span style="font-size: 13px; color: #64748b; font-style: italic; display: block; margin-bottom: 8px;">Facilitator: Dr. Olivia Onditi (Health & Wellness Lead)</span>
-                    <p style="margin: 0 0 8px 0; font-size: 15px; color: #1e293b;"><strong>Primary Activity:</strong> Formulating technical clinical protocols and equipment safety compliance parameters for the upcoming LUF-Neurotorium Initiative (2027–2030).</p>
-                    <ul style="margin: 0; padding-left: 20px; color: #475569; font-size: 14px; line-height: 1.5;">
-                        <li style="margin-bottom: 4px;">Synchronizing project tracking indicators with Kenya National Mental Health Action Plan guidelines.</li>
-                        <li style="margin-bottom: 4px;">Reviewing technical specifications of incoming mobile screening kits to ensure data security standards.</li>
-                        <li>Drafting a clinical triage guide for field staff handling community referrals.</li>
-                    </ul>
-                </div>
-
-                <!-- PROGRAM 2 -->
-                <div style="border-left: 4px solid #2563eb; padding-left: 15px;">
-                    <h4 style="margin: 0 0 4px 0; font-size: 16px; color: #2563eb; font-weight: 700; text-transform: uppercase;">🔵 Program 2: Decentralized Clinic Logistical Sync</h4>
-                    <span style="font-size: 13px; color: #64748b; font-style: italic; display: block; margin-bottom: 8px;">Facilitator: Oliver Erupe (Director of Field Operations)</span>
-                    <p style="margin: 0 0 8px 0; font-size: 15px; color: #1e293b;"><strong>Primary Activity:</strong> Conducting site compatibility reviews and field tracking loops across target Level 2 and Level 3 public healthcare facilities.</p>
-                    <ul style="margin: 0; padding-left: 20px; color: #475569; font-size: 14px; line-height: 1.5;">
-                        <li style="margin-bottom: 4px;">Setting up coordination briefings with facility heads at Mathare North and Huruma Health Centres to review storage safety.</li>
-                        <li style="margin-bottom: 4px;">Organising ward-level logistics huddles to pre-onboard community health promoters (CHPs) for mobile outreach work.</li>
-                        <li>Mapping localized geographical clusters to design efficient transit paths for mobile hardware kits.</li>
-                    </ul>
-                </div>
-
-                <!-- PROGRAM 3 -->
-                <div style="border-left: 4px solid #ca8a04; padding-left: 15px;">
-                    <h4 style="margin: 0 0 4px 0; font-size: 16px; color: #ca8a04; font-weight: 700; text-transform: uppercase;">🟡 Program 3: Secretariat Administrative & Regulatory Alignment</h4>
-                    <span style="font-size: 13px; color: #64748b; font-style: italic; display: block; margin-bottom: 8px;">Facilitator: Edwin Odawo (Executive Director)</span>
-                    <p style="margin: 0 0 8px 0; font-size: 15px; color: #1e293b;"><strong>Primary Activity:</strong> Overseeing institutional compliance updates and data structural divisions within the LUF Network digital registry.</p>
-                    <ul style="margin: 0; padding-left: 20px; color: #475569; font-size: 14px; line-height: 1.5;">
-                        <li style="margin-bottom: 4px;">Separating public Heritage & Legacy Framework from internal Governance Pages to ensure pristine transparency for state and donor audits.</li>
-                        <li style="margin-bottom: 4px;">Finalizing transmittal briefs, project data folders, and institutional letter templates for upcoming municipal presentations.</li>
-                        <li>Formatting an Excel-compatible centralized activity log to streamline data collection for the 2026 Annual Progress Report.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-    </section>
-    <!-- ==================== CORE OPERATIONAL PILLARS ==================== -->
-    <section style="margin-bottom: 40px;">
-        
-        <!-- 1. HEALTH EQUITY & CLINICAL NETWORKS -->
-        <div style="background-color: #ffffff; padding: 35px; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px rgba(0,0,0,0.01); margin-bottom: 30px;">
-            <h2 style="font-size: 26px; color: #0f172a; font-weight: 800; margin-top: 0; margin-bottom: 15px; border-left: 5px solid #16a34a; padding-left: 15px;">1. Health Equity & Clinical Networks</h2>
-            <p style="color: #475569; font-size: 16px; line-height: 1.7; margin-bottom: 20px;">
-                Securing structural equity across under-resourced communities through specialized medical hardware grants, institutional referral channels, and capacity building for grassroots healthcare personnel.
-            </p>
+        </section>
+        <!-- SECTION 3: MULTI-YEAR STRATEGIC DELIVERY MATRIX (PATH C) -->
+        <section id="decentralized-delivery-ledger" style="margin-bottom: 50px;">
+            <h2>Multi-Year Strategic Delivery Matrix (Path C)</h2>
+            <p style="color: #4b5563; font-size: 0.95rem; margin-bottom: 20px;">Comprehensive decentralization ledger moving mental health triage workflows straight into sub-county level clinics (Mathare North, Huruma, and Baba Dogo) to bypass referral delays.</p>
             
-            <div style="background: #f8fafc; padding: 15px 20px; border-radius: 8px; margin-bottom: 10px; border: 1px solid #e2e8f0;">
-                <strong style="color: #1e293b; display: block; font-size: 15px; margin-bottom: 4px;">📁 Targeted Food Security Links</strong>
-                <p style="margin: 0; color: #64748b; font-size: 14px;">Deploying immediate baseline nutritional tracking maps and supply channels across informal settlements to counter severe structural vulnerabilities.</p>
+            <table class="matrix-table">
+                <thead>
+                    <tr>
+                        <th style="width: 25%;">Activity & Timeline</th>
+                        <th style="width: 25%;">Core Personnel</th>
+                        <th style="width: 35%;">Decentralized Hub Adaptation (Path C)</th>
+                        <th style="width: 15%;">Budget</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>1. Curriculum & KEML Mapping</strong><br><small style="color:#6b7280;">Months 1–3 (Feb-Apr 2027)</small></td>
+                        <td>
+                            <ul class="bullet-list">
+                                <li>2 Mathari Facilitators</li>
+                                <li>1 LUF Evaluator</li>
+                                <li>5 Psychiatric Registrars</li>
+                            </ul>
+                        </td>
+                        <td><strong>Operational Baseline:</strong> Syncs localized training parameters with the Kenya Essential Medicines List to ensure primary dispensaries possess correct baseline pharmacy matching.</td>
+                        <td style="font-weight: 700; color: var(--green);">DKK 15,000</td>
+                    </tr>
+                    <tr>
+                        <td><strong>2. Hardware & Kit Deployment</strong><br><small style="color:#6b7280;">Months 2–4 (Mar-May 2027)</small></td>
+                        <td>
+                            <ul class="bullet-list">
+                                <li>1 LUF Evaluator</li>
+                                <li>2 Mathari Staff</li>
+                                <li>10 Biomedical Interns</li>
+                            </ul>
+                        </td>
+                        <td><strong>Hub Mobilization:</strong> Supplying and stress-testing **20 Mobile Mastery Kits** (portable screening arrays) directly inside ward facility consultation rooms.</td>
+                        <td style="font-weight: 700; color: var(--green);">DKK 55,000</td>
+                    </tr>
+                    <tr>
+                        <td><strong>3. Clinical Bootcamp</strong><br><small style="color:#6b7280;">Month 5 (June 2027)</small></td>
+                        <td>
+                            <ul class="bullet-list">
+                                <li>2 Mathari Facilitators</li>
+                                <li>1 LUF Evaluator</li>
+                                <li>20 Senior Students</li>
+                            </ul>
+                        </td>
+                        <td><strong>Capacity Scaling:</strong> Intensive 3-day certificate seminar certifying 20 elite student "Clinical Champions" to supervise everyday ward triage workflows.</td>
+                        <td style="font-weight: 700; color: var(--green);">DKK 25,000</td>
+                    </tr>
+                    <tr>
+                        <td><strong>4. Frontline Floor Pilot Run</strong><br><small style="color:#6b7280;">Months 6–12 (Jul 2027 - Jan 2028)</small></td>
+                        <td>
+                            <ul class="bullet-list">
+                                <li>20 Clinical Champions</li>
+                                <li>2 Mathari Facilitators</li>
+                                <li>1 LUF Evaluator</li>
+                            </ul>
+                        </td>
+                        <td><strong>Active Pilot execution:</strong> Direct bedside teaching models and diagnostic evaluations training 100 clinical interns on outpatient neuropsychiatric triage.</td>
+                        <td style="font-weight: 700; color: var(--green);">DKK 25,000</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div style="background-color: var(--light); padding: 15px 20px; border-radius: 6px; font-weight: 700; color: var(--primary); text-align: right; font-size: 1.05rem; border-right: 4px solid var(--green);">
+                Total Year 1 Allocation Framework: DKK 120,000
             </div>
-            <div style="background: #f8fafc; padding: 15px 20px; border-radius: 8px; margin-bottom: 10px; border: 1px solid #e2e8f0;">
-                <strong style="color: #1e293b; display: block; font-size: 15px; margin-bottom: 4px;">👕 Clean Clothing Networks</strong>
-                <p style="margin: 0; color: #64748b; font-size: 14px;">Coordinating protective clothing distribution clusters to secure basic physical sanitation safety levels for low-income household dependents.</p>
-            </div>
-            <div style="background: #f8fafc; padding: 15px 20px; border-radius: 8px; border: 1px solid #e2e8f0;">
-                <strong style="color: #1e293b; display: block; font-size: 15px; margin-bottom: 4px;">🚨 Emergency Response Channels</strong>
-                <p style="margin: 0; color: #64748b; font-size: 14px;">Maintaining real-time open-source crisis logging lines to alert facility coordinators regarding immediate hazard developments in field zones.</p>
-            </div>
-        </div>
+        </section>
+    </main>
 
-        <!-- 2. EDUCATION & SKILLS -->
-        <div style="background-color: #ffffff; padding: 35px; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px rgba(0,0,0,0.01); margin-bottom: 30px;">
-            <h2 style="font-size: 26px; color: #0f172a; font-weight: 800; margin-top: 0; margin-bottom: 15px; border-left: 5px solid #2563eb; padding-left: 15px;">2. Education & Skills</h2>
-            <p style="color: #475569; font-size: 16px; line-height: 1.7; margin-bottom: 20px;">
-                Hosting structured community classes, digital literacy bootcamps, and professional vocational training sessions aimed at equipping marginalized individuals to secure sustainable careers.
-            </p>
-            <div style="background: #f8fafc; padding: 15px 20px; border-radius: 8px; border: 1px solid #e2e8f0;">
-                <strong style="color: #1e293b; display: block; font-size: 15px; margin-bottom: 4px;">📚 Maternal Wellbeing Literacy</strong>
-                <p style="margin: 0; color: #64748b; font-size: 14px;">Conducting community training forums detailing prenatal safety parameters and nutritional monitoring checklists for field mothers.</p>
-            </div>
-        </div>
-
-    </section>
-
-</main>
+    <footer style="margin-top: 60px; padding: 20px 0; border-top: 1px solid #e5e7eb; text-align: center; font-size: 0.9rem; color: #6b7280;">
+        <p>&copy; 2026 Local Urban Forum Network (LUF Network) • Global Transparency & Public Archive Registry</p>
+    </footer>
 
 </body>
 </html>
