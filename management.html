@@ -1,10 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LUF Network - Management & Governance</title>
-</head>
+<style>
+        :root { 
+            --primary-blue: #0056b3;
+            --dark-charcoal: #222222;
+            --light-gray: #f8f9fa;
+            --border-color: #e0e0e0;
+            --text-muted: #555555;
+            --accent-green: #1b5e20;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.7; color: var(--dark-charcoal); max-width: 1100px; margin: 0 auto; padding: 0 20px; background-color: #ffffff; }
+
+        /* 🏢 PERFECTED INSTITUTIONAL HEADER FIXED COMPONENT */
+        .institutional-header {
+            background: #ffffff;
+            border-bottom: 3px solid var(--primary-blue);
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+        .identity-brand { display: flex; align-items: center; gap: 1.2rem; }
+        .emblem-wrapper { display: flex; align-items: center; gap: 0.8rem; }
+        .emblem-img { height: 65px; width: auto; object-fit: contain; }
+        .capsule-badge { background-color: var(--primary-blue); color: #ffffff; padding: 0.25rem 0.75rem; border-radius: 50px; font-size: 0.75rem; font-weight: bold; text-transform: uppercase; letter-spacing: 0.05em; }
+        .branding-text { font-size: 1.6rem; font-weight: 800; color: var(--dark-charcoal); text-transform: uppercase; letter-spacing: -0.02em; line-height: 1.1; text-align: left; }
+
+        .secretariat-contact { font-size: 0.85rem; text-align: right; border-left: 2px solid var(--border-color); padding-left: 1.5rem; line-height: 1.4; }
+        .secretariat-contact p { margin-bottom: 0.2rem; }
+        .secretariat-contact strong { font-weight: 800; color: var(--dark-charcoal); }
+        .secretariat-contact a { color: var(--primary-blue); text-decoration: none; font-weight: bold; }
+
+        /* --- NAVIGATION GRID --- */
+        .main-nav { background-color: var(--dark-charcoal); padding: 0.75rem 2rem; display: block; margin-bottom: 20px; }
+        .nav-links { display: flex; list-style: none; gap: 2rem; justify-content: flex-start; }
+        .nav-links a { color: #ffffff; text-decoration: none; font-size: 0.95rem; font-weight: 600; transition: color 0.2s ease; }
+        .nav-links a:hover, .nav-links a.active { color: #3498db; }
+
+        /* --- CONTENT CARD CONTAINER --- */
+        .content-card-box { background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 35px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02); margin-bottom: 40px; }
+    </style>
 <body style="margin: 0; padding: 0; background-color: #f8fafc; font-family: sans-serif;">
 
 <!-- Standardized Navigation Header Frame (Management Active) -->
