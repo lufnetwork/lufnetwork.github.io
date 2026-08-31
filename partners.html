@@ -1,10 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LUF Network - Partners & Synergy</title>
-</head>
+:root { 
+    --primary: #1e3a8a; 
+    --secondary: #3b82f6; 
+    --dark: #1f2937; 
+    --light: #f9fafb; 
+    --accent: #2563eb; 
+    --border: #cbd5e1;
+}
+
+/* 🏢 UNIFIED INSTITUTIONAL HEADER FRAME STYLES */
+.brand-header-container { display: flex; flex-direction: column; border-bottom: 3px solid var(--primary); padding-bottom: 15px; margin-bottom: 40px; margin-top: 15px; }
+.banner-row { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; padding: 10px 0; }
+.org-branding-box { display: flex; flex-direction: column; max-width: 450px; }
+.logo-graphics-sub { display: flex; align-items: center; gap: 15px; margin-top: 15px; }
+
+/* Secretariat Contact Block */
+.registry-contact-block { font-size: 0.78rem; font-family: Arial, sans-serif; line-height: 1.35; color: #4b5563; border-left: 2px solid var(--border); padding-left: 15px; max-width: 320px; text-align: left; }
+.registry-contact-block strong { color: var(--primary); }
+.badge-capsule { display: inline-block; background: #854d0e; color: #fff; font-size: 0.75rem; font-weight: 700; padding: 4px 8px; border-radius: 4px; text-transform: uppercase; }
+
+/* Navigation Grid Row */
+.navigation-grid-row { display: flex; justify-content: flex-end; align-items: center; gap: 25px; margin-top: 20px; background: var(--light); padding: 12px 20px; border-radius: 6px; box-shadow: inset 0 1px 2px rgba(0,0,0,0.05); }
+.navigation-grid-row a { text-decoration: none; color: #374151; font-weight: 600; font-size: 0.95rem; text-transform: capitalize; position: relative; padding-bottom: 4px; transition: color 0.2s; }
+.navigation-grid-row a:hover { color: var(--accent); }
+.navigation-grid-row a.active { color: var(--accent); font-weight: 700; }
+.navigation-grid-row a.active::after { content: ""; position: absolute; bottom: 0; left: 0; width: 100%; height: 3px; background: var(--accent); border-radius: 2px; }
 <body style="margin: 0; padding: 0; background-color: #f8fafc; font-family: sans-serif;">
 
 <!-- PRISTINE SINGLE NAV BAR -->
