@@ -47,12 +47,38 @@
         /* --- CONTENT CARD CONTAINER --- */
         .content-card-box { background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 35px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02); margin-bottom: 40px; }
         
-        /* Management Specific Roles Layout */
-        .management-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 20px; }
-        @media (max-width: 768px) { .management-grid { grid-template-columns: 1fr; } }
-        .profile-card { border: 1px solid var(--border-color); padding: 1.5rem; border-radius: 6px; background: var(--light-gray); text-align: left; }
-        .profile-card h3 { color: var(--primary-blue); margin-bottom: 0.25rem; font-weight: 700; }
-        .profile-role { font-weight: 600; font-size: 0.95rem; margin-bottom: 1rem; color: var(--accent-green); text-transform: uppercase; letter-spacing: 0.5px; }
+        /* 📊 STRUCTURAL ORGANOGRAM & TREE LAYOUT */
+        .organogram-container { position: relative; padding: 20px 0; margin-top: 30px; text-align: center; }
+        
+        .board-level { display: flex; justify-content: center; margin-bottom: 40px; position: relative; }
+        .executive-level { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; position: relative; }
+        
+        /* Connecting Line Connectors */
+        .board-level::after { content: ''; position: absolute; bottom: -20px; left: 50%; width: 2px; height: 20px; background: #cbd5e1; }
+        .executive-level::before { content: ''; position: absolute; top: -20px; left: 50%; width: 2px; height: 20px; background: #cbd5e1; }
+        
+        .diagram-node { 
+            background: #ffffff; 
+            border: 2px solid var(--primary-blue); 
+            border-radius: 8px; 
+            padding: 20px; 
+            width: 280px; 
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); 
+            text-align: left;
+            transition: transform 0.2s;
+        }
+        .diagram-node:hover { transform: translateY(-2px); }
+        .diagram-node.director-node { border-color: var(--accent-green); }
+        .diagram-node h3 { font-size: 1.15rem; color: var(--dark-charcoal); font-weight: 700; margin-bottom: 4px; }
+        .diagram-node .node-role { font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px; }
+        .diagram-node.director-node .node-role { color: var(--accent-green); }
+        .diagram-node.exec-node .node-role { color: var(--primary-blue); }
+        .diagram-node p { font-size: 0.88rem; color: var(--text-muted); line-height: 1.5; }
+        
+        @media (max-width: 768px) {
+            .executive-level { flex-direction: column; align-items: center; gap: 20px; }
+            .board-level::after, .executive-level::before { display: none; }
+        }
     </style>
 </head>
 <body>
@@ -89,21 +115,37 @@
     <!-- MAIN REPOSITORY CONTENT CONTAINER -->
     <main class="content-card-box">
         <div style="text-align: left; margin-bottom: 25px;">
-            <h2 style="font-size: 1.75rem; color: var(--dark-charcoal); font-weight: 800; border-bottom: 2px solid var(--light-gray); padding-bottom: 0.5rem;">management.html — Management Core</h2>
-            <p style="margin-top: 10px; font-style: italic; color: var(--text-muted);">Re-aligned via local backup files to guarantee structural role clarity.</p>
+            <h2 style="font-size: 1.75rem; color: var(--dark-charcoal); font-weight: 800; border-bottom: 2px solid var(--light-gray); padding-bottom: 0.5rem;">management.html — Governance Structure</h2>
+            <p style="margin-top: 10px; font-style: italic; color: var(--text-muted);">Re-aligned via local backup files to guarantee structural role clarity and operational alignment.</p>
         </div>
         
-        <div class="management-grid">
-            <div class="profile-card">
-                <h3>Oliver Erupe</h3>
-                <p class="profile-role">Executive Director / Operations Lead</p>
-                <p>Oversees the strategic alignment of the 9 structural pillars and ensures policy mandates map reliably across local secretariat nodes.</p>
+        <!-- 📊 GOVERNANCE DIAGRAM CHART FLOW -->
+        <div class="organogram-container">
+            
+            <!-- Director Node Level (Top Tier) -->
+            <div class="board-level">
+                <div class="diagram-node director-node">
+                    <h3>Edwin Odawo</h3>
+                    <div class="node-role">Director / Board Lead</div>
+                    <p>Guides overarching institutional governance, anchors compliance monitoring pipelines, and ratifies strategic multi-agency partnerships.</p>
+                </div>
             </div>
-            <div class="profile-card">
-                <h3>Dr. Olivia Onditi</h3>
-                <p class="profile-role">Technical Director / Strategy Specialist</p>
-                <p>Manages project deployment ledgers, programmatic tracking matrices, and evaluates regulatory compliance workflows across international channels.</p>
+            
+            <!-- Operations & Technical Execution Level (Linked Lower Tier) -->
+            <div class="executive-level">
+                <div class="diagram-node exec-node">
+                    <h3>Oliver Erupe</h3>
+                    <div class="node-role">Executive Director / Operations Lead</div>
+                    <p>Oversees the strategic alignment of the 9 structural pillars and ensures policy mandates map reliably across local secretariat nodes.</p>
+                </div>
+                
+                <div class="diagram-node exec-node">
+                    <h3>Dr. Olivia Onditi</h3>
+                    <div class="node-role">Technical Director / Strategy Specialist</div>
+                    <p>Manages project deployment ledgers, programmatic tracking matrices, and evaluates regulatory compliance workflows across international channels.</p>
+                </div>
             </div>
+
         </div>
     </main>
 
