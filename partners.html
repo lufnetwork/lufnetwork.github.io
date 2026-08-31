@@ -38,19 +38,26 @@
         .secretariat-contact strong { font-weight: 800; color: var(--dark-charcoal); }
 
         /* --- NAVIGATION GRID --- */
-        .main-nav { background-color: var(--dark-charcoal); padding: 0.75rem 2rem; display: block; }
+        .main-nav { background-color: var(--dark-charcoal); padding: 0.75rem 2rem; display: block; margin-bottom: 20px; }
         .nav-links { display: flex; list-style: none; gap: 2rem; justify-content: flex-start; }
         .nav-links a { color: #ffffff; text-decoration: none; font-size: 0.95rem; font-weight: 600; transition: color 0.2s ease; }
         .nav-links a:hover, .nav-links a.active { color: #3498db; }
 
-        /* --- CONTENT WORKSPACE DISPLAY DESIGN --- */
-        main { display: block; padding: 40px 0; }
-        
+        /* --- CONTENT CARD CONTAINER --- */
+        .content-card-box {
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 35px;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02);
+            margin-bottom: 40px;
+        }
+
         .page-intro { background-color: var(--light-gray); border-left: 4px solid var(--primary-blue); padding: 25px; margin-bottom: 35px; border-radius: 0 8px 8px 0; text-align: left; }
         .page-intro h2 { font-size: 1.8rem; color: var(--dark-charcoal); font-weight: 800; margin-bottom: 8px; }
         .page-intro p { color: var(--text-muted); font-size: 1.05rem; }
 
-        .quote-block { background: #fffdf6; border: 1px solid #fef3c7; border-left: 4px solid #d97706; padding: 20px; margin-bottom: 35px; border-radius: 4px; font-style: italic; text-align: left; }
+        .quote-block { background: #fffdf6; border: 1px solid #fef3c7; border-left: 4px solid #d97706; padding: 20px; margin-bottom: 35px; border-radius: 4px; font-style: italic; text-align: left; line-height: 1.6; color: #475569; }
         
         .section-header { font-size: 1.3rem; font-weight: 800; color: var(--accent-green); text-transform: uppercase; margin: 35px 0 15px 0; border-bottom: 2px solid var(--light-gray); padding-bottom: 5px; text-align: left; letter-spacing: 0.5px; }
         
@@ -58,11 +65,11 @@
         .synergy-card h3 { font-size: 1.25rem; color: var(--primary-blue); margin-bottom: 10px; font-weight: 700; }
         .synergy-card h4 { font-size: 0.95rem; color: var(--text-muted); margin-bottom: 15px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
         
-        .bullet-list { margin: 15px 0 0 20px; color: var(--dark-charcoal); }
-        .bullet-list li { margin-bottom: 6px; }
+        .bullet-list { margin: 15px 0 20px 20px; color: var(--dark-charcoal); text-align: left; }
+        .bullet-list li { margin-bottom: 10px; line-height: 1.6; }
 
         .protocol-box { background: #f0f7ff; border: 1px solid #d0e7ff; border-left: 4px solid var(--primary-blue); padding: 20px; border-radius: 6px; margin-top: 25px; text-align: left; }
-        .protocol-box h3 { color: var(--primary-blue); margin-bottom: 8px; font-size: 1.15rem; display: flex; align-items: center; gap: 8px; }
+        .protocol-box h3 { color: var(--primary-blue); margin-bottom: 8px; font-size: 1.15rem; font-weight: 700; }
     </style>
 </head>
 <body>
@@ -96,8 +103,8 @@
         </ul>
     </nav>
 
-    <!-- 💻 CONTENT WORKSPACE SHARE -->
-    <main>
+    <!-- MAIN REPOSITORY CONTENT CONTAINER -->
+    <main class="content-card-box">
         
         <!-- INTRO -->
         <div class="page-intro">
@@ -136,14 +143,10 @@
             <h3>Grassroots Mental Health Frontlines</h3>
             <h4>Specialized Community-Led Coalitions & Burden Framework</h4>
             
-            <p style="margin-bottom: 12px;"><strong>The Burden of Illness:</strong> Mental health, behavioral, and social problems are an increasing part of our public health burden. Hundreds of thousands of women, men, and children suffer silently from mental illness, while countless others experience deep distress from the consequences of violence, dislocation, poverty, and exploitation.</p>
+            <p style="margin-bottom: 12px; color: #475569;"><strong>The Burden of Illness:</strong> Mental health, behavioral, and social problems are an increasing part of our public health burden. Hundreds of thousands of women, men, and children suffer silently from mental illness, while countless others experience deep distress from the consequences of violence, dislocation, poverty, and exploitation.</p>
             
-            <p style="margin-bottom: 12px;"><strong>Demographic Vulnerability:</strong> Substance abuse and deep-rooted behavioral problems aggressively affect the lives of countless men, adolescents, young adults, middle-aged women, and the elderly across urban hubs.</p>
+            <p style="margin-bottom: 12px; color: #475569;"><strong>Demographic Vulnerability:</strong> Substance abuse and deep-rooted behavioral problems aggressively affect the lives of countless men, adolescents, young adults, middle-aged women, and the elderly across urban hubs.</p>
             
-            <p style="margin-bottom: 12px;"><strong>The Hidden Statistic:</strong> Though the systemic burden resulting from psychiatric and behavioral disorders is enormous, it is grossly under-represented by conventional public health statistics. Furthermore, individuals who suffer from mental illnesses are severely stigmatized, which deeply extends to their families.</p>
+            <p style="margin-bottom: 12px; color: #475569;"><strong>The Hidden Statistic:</strong> Though the systemic burden resulting from psychiatric and behavioral disorders is enormous, it is grossly under-represented by conventional public health statistics. Furthermore, individuals who suffer from mental illnesses are severely stigmatized, which deeply extends to their families.</p>
             
-            <p style="font-weight: 700; color: var(--primary-blue); margin-bottom: 15px;">Mental health is a vital, non-negotiable component of the entire health status of an individual.</p>
-
-            <strong>Strategic Key Activities:</strong>
-            <ul class="bullet-list">
-                <li><strong>Media Programming:</strong> Mass broadcasting high-impact mental wellness scripts to reach vulnerable sectors.</li>
+            <p style="font-weight: 700; color: #0056b3; margin-bottom: 20px; font-size: 1.05rem;">Mental health is a vital, non-negotiable component of the entire health status of an individual.</p>
