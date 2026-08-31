@@ -11,6 +11,7 @@
             --light-gray: #f8f9fa;
             --border-color: #e0e0e0;
             --text-muted: #555555;
+            --accent-green: #1b5e20;
         }
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.7; color: var(--dark-charcoal); max-width: 1100px; margin: 0 auto; padding: 0 20px; background-color: #ffffff; }
@@ -42,11 +43,26 @@
         .nav-links a { color: #ffffff; text-decoration: none; font-size: 0.95rem; font-weight: 600; transition: color 0.2s ease; }
         .nav-links a:hover, .nav-links a.active { color: #3498db; }
 
-        /* --- CUSTOM WORKSPACE DESIGN AREA --- */
+        /* --- CONTENT WORKSPACE DISPLAY DESIGN --- */
         main { display: block; padding: 40px 0; }
         
-        /* ⬇️ PASTE YOUR CUSTOM PARTNER CARD CSS STYLES DIRECTLY BELOW THIS LINE ⬇️ */
+        .page-intro { background-color: var(--light-gray); border-left: 4px solid var(--primary-blue); padding: 25px; margin-bottom: 35px; border-radius: 0 8px 8px 0; text-align: left; }
+        .page-intro h2 { font-size: 1.8rem; color: var(--dark-charcoal); font-weight: 800; margin-bottom: 8px; }
+        .page-intro p { color: var(--text-muted); font-size: 1.05rem; }
 
+        .quote-block { background: #fffdf6; border: 1px solid #fef3c7; border-left: 4px solid #d97706; padding: 20px; margin-bottom: 35px; border-radius: 4px; font-style: italic; text-align: left; }
+        
+        .section-header { font-size: 1.3rem; font-weight: 800; color: var(--accent-green); text-transform: uppercase; margin: 35px 0 15px 0; border-bottom: 2px solid var(--light-gray); padding-bottom: 5px; text-align: left; letter-spacing: 0.5px; }
+        
+        .synergy-card { background: #ffffff; border: 1px solid var(--border-color); border-radius: 8px; padding: 25px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); text-align: left; }
+        .synergy-card h3 { font-size: 1.25rem; color: var(--primary-blue); margin-bottom: 10px; font-weight: 700; }
+        .synergy-card h4 { font-size: 0.95rem; color: var(--text-muted); margin-bottom: 15px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+        
+        .bullet-list { margin: 15px 0 0 20px; color: var(--dark-charcoal); }
+        .bullet-list li { margin-bottom: 6px; }
+
+        .protocol-box { background: #f0f7ff; border: 1px solid #d0e7ff; border-left: 4px solid var(--primary-blue); padding: 20px; border-radius: 6px; margin-top: 25px; text-align: left; }
+        .protocol-box h3 { color: var(--primary-blue); margin-bottom: 8px; font-size: 1.15rem; display: flex; align-items: center; gap: 8px; }
     </style>
 </head>
 <body>
@@ -82,70 +98,52 @@
 
     <!-- 💻 CONTENT WORKSPACE SHARE -->
     <main>
-        <!-- ⬇️ PASTE YOUR PARTNER CONTENT CARDS/HTML DIRECTLY BELOW THIS LINE ⬇️ -->
-Partnerships & Strategic Synergy
-Emphasizing strategic health communication channels to ensure maximum, cross-cutting, and synchronized community impacts across urban sectors.
+        
+        <!-- INTRO -->
+        <div class="page-intro">
+            <h2>Partnerships & Strategic Synergy</h2>
+            <p>Emphasizing strategic health communication channels to ensure maximum, cross-cutting, and synchronized community impacts across urban sectors.</p>
+        </div>
 
-Strategic Multi-Agency Mobilization
-"No single organization can transform public health alone. At LUF NETWORK, we bridge the gap between high-level public health policy and on-the-ground urban survival. By weaving national guidelines directly into the fabric of localized community action, we turn institutional frameworks into life-saving, synchronized community networks."
+        <!-- STRATEGIC VISION -->
+        <div class="quote-block">
+            <strong>Strategic Multi-Agency Mobilization:</strong><br>
+            "No single organization can transform public health alone. At LUF NETWORK, we bridge the gap between high-level public health policy and on-the-ground urban survival. By weaving national guidelines directly into the fabric of localized community action, we turn institutional frameworks into life-saving, synchronized community networks."
+        </div>
 
-National Alignment
-HIV-AIDS Communication Hub
-National AIDS Control Unit Integration
+        <!-- CATEGORY 1 -->
+        <div class="section-header">National Alignment</div>
+        
+        <div class="synergy-card">
+            <h3>HIV-AIDS Communication Hub</h3>
+            <h4>National AIDS Control Unit Integration</h4>
+            <p>We break the silence in urban hubs! By linking our field teams directly with the structural sensitization strategies of the National AIDS Control Unit, we deploy high-impact, stigma-free health communication campaigns. We are actively converting clinical protocols into plain, compassionate urban language, ensuring rapid self-test kit distribution networks and seamless connection paths to treatment centers for vulnerable households.</p>
+        </div>
 
-We break the silence in urban hubs! By linking our field teams directly with the structural sensitization strategies of the National AIDS Control Unit, we deploy high-impact, stigma-free health communication campaigns. We are actively converting clinical protocols into plain, compassionate urban language, ensuring rapid self-test kit distribution networks and seamless connection paths to treatment centers for vulnerable households.
+        <!-- CATEGORY 2 -->
+        <div class="section-header">Enforcement Framework</div>
 
-Enforcement Framework
-Substance Abuse Defense Systems
-NACADA Compliance & Advisory Tracking
+        <div class="synergy-card">
+            <h3>Substance Abuse Defense Systems</h3>
+            <h4>NACADA Compliance & Advisory Tracking</h4>
+            <p>Reclaiming the potential of urban youth! In direct synergy with NACADA guidelines, LUF NETWORK transforms passive warnings into bold, active alternative community pathways. We establish peer-led defense channels inside congested zones, deploying powerful, relatable behavioral communication campaigns that actively dismantle addiction vulnerabilities while establishing immediate counseling safety zones.</p>
+        </div>
 
-Reclaiming the potential of urban youth! In direct synergy with NACADA guidelines, LUF NETWORK transforms passive warnings into bold, active alternative community pathways. We establish peer-led defense channels inside congested zones, deploying powerful, relatable behavioral communication campaigns that actively dismantle addiction vulnerabilities while establishing immediate counseling safety zones.
+        <!-- CATEGORY 3 -->
+        <div class="section-header">Grassroots Activism</div>
 
-Grassroots Activism
-Grassroots Mental Health Frontlines
-Specialized Community-Led Coalitions & Burden Framework
+        <div class="synergy-card">
+            <h3>Grassroots Mental Health Frontlines</h3>
+            <h4>Specialized Community-Led Coalitions & Burden Framework</h4>
+            
+            <p style="margin-bottom: 12px;"><strong>The Burden of Illness:</strong> Mental health, behavioral, and social problems are an increasing part of our public health burden. Hundreds of thousands of women, men, and children suffer silently from mental illness, while countless others experience deep distress from the consequences of violence, dislocation, poverty, and exploitation.</p>
+            
+            <p style="margin-bottom: 12px;"><strong>Demographic Vulnerability:</strong> Substance abuse and deep-rooted behavioral problems aggressively affect the lives of countless men, adolescents, young adults, middle-aged women, and the elderly across urban hubs.</p>
+            
+            <p style="margin-bottom: 12px;"><strong>The Hidden Statistic:</strong> Though the systemic burden resulting from psychiatric and behavioral disorders is enormous, it is grossly under-represented by conventional public health statistics. Furthermore, individuals who suffer from mental illnesses are severely stigmatized, which deeply extends to their families.</p>
+            
+            <p style="font-weight: 700; color: var(--primary-blue); margin-bottom: 15px;">Mental health is a vital, non-negotiable component of the entire health status of an individual.</p>
 
-The Burden of Illness: Mental health, behavioral, and social problems are an increasing part of our public health burden. Hundreds of thousands of women, men, and children suffer silently from mental illness, while countless others experience deep distress from the consequences of violence, dislocation, poverty, and exploitation.
-
-Demographic Vulnerability: Substance abuse and deep-rooted behavioral problems aggressively affect the lives of countless men, adolescents, young adults, middle-aged women, and the elderly across urban hubs.
-
-The Hidden Statistic: Though the systemic burden resulting from psychiatric and behavioral disorders is enormous, it is grossly under-represented by conventional public health statistics. Furthermore, individuals who suffer from mental illnesses are severely stigmatized, which deeply extends to their families.
-
-Mental health is a vital, non-negotiable component of the entire health status of an individual.
-
-Strategic Key Activities:
-Media Programming: Mass broadcasting high-impact mental wellness scripts to reach vulnerable sectors.
-Community Mental Health Education: Running stigma-free baseline sensitization modules.
-IEC Print Materials: Supplying targeted Information, Education, and Communication tools into dense centers.
-Stakeholder Training: Training healthcare providers and community-based frontline workers.
-Mental Health Day Activities: Organizing high-level seminars, workshops, and multi-agency conferences.
-Development of Rapid Risk Assessment Checklist: Coding standardized field tracking templates to screen distress curves.
-Referral Cards & Research Mobilization: Utilizing integrated field referral tracks to actively promote rigorous research on various aspects of localized mental health.
-🏥 Clinical Referral & Reporting Protocol
-LUF NETWORK field workers operate under strict ethical guidelines. Individuals identified during urban outreaches via our localized Risk Assessment Checklists are instantly routed through confidential referral card pathways directly to partner referral health clinics and national psychiatric facilities for primary care.
-
-Public Policy
-Maternal & Reproductive Health Rights
-Ministry of Health Public Sector Guidelines
-
-Empowering women, protecting futures. Running hand-in-hand with the Ministry of Health standards, our mobile teams bring safe, actionable reproductive health literacy directly to women's doorsteps. We deploy high-impact maternal wellness communication networks, ensuring clean medical tracking, family planning education streams, and secure bridges to primary medical wings.
-
-Infectious Diseases
-Tuberculosis (TB) Interventions
-Community Tracking & Screening Protocols
-
-Slicing transmission curves where it matters most. Congested living quarters demand aggressive public health tracing. LUF NETWORK designs rapid door-to-door ventilation awareness drives and treatment-compliance tracking systems. By deploying simple, clear diagnostic guidelines, we ensure early screening, reduce local contagions, and keep urban families safe.
-
-Emerging Needs
-Integrated Health Logistics Network
-Non-Communicable Conditions & Nutrition
-
-Building total community resilience against the unexpected! We are expanding our communication platforms to deploy synchronized warnings and resource maps during public health crises. From mapping hyper-local hypertension screening clinics to coordinating fast nutritional relief distribution with emergency stakeholders, we make sure no household falls through the cracks.
-
-© 2026 LUF NETWORK. All rights reserved.
-
-Empowering Communities, Protecting Health, and Advancing Social Equity Globally.
-    </main>
-
-</body>
-</html>
+            <strong>Strategic Key Activities:</strong>
+            <ul class="bullet-list">
+                <li><strong>Media Programming:</strong> Mass broadcasting high-impact mental wellness scripts to reach vulnerable sectors.</li>
