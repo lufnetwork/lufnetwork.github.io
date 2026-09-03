@@ -3,84 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Projects & Live Feed | LUF Network</title>
+    <title>Our Projects | LUF Network</title>
     <style>
-        :root { --primary: #1e3a8a; --secondary: #3b82f6; --dark: #1f2937; --light: #f9fafb; --accent: #2563eb; --green: #1b5e20; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.7; color: var(--dark); max-width: 1100px; margin: 0 auto; padding: 0 20px; background-color: #ffffff; }
-        
-        /* Institutional Header Banner Section */
-        .brand-header-container { display: flex; flex-direction: column; border-bottom: 3px solid var(--primary); padding-bottom: 15px; margin-bottom: 40px; margin-top: 15px; }
-        .banner-row { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; padding: 10px 0; }
-        .org-branding-box { display: flex; flex-direction: column; max-width: 450px; }
-        .logo-graphics-sub { display: flex; align-items: center; gap: 15px; margin-top: 15px; }
-        
-        /* Contact Block Right-Aligned */
-        .registry-contact-block { font-size: 0.78rem; font-family: Arial, sans-serif; line-height: 1.35; color: #4b5563; border-left: 2px solid #cbd5e1; padding-left: 15px; max-width: 320px; text-align: left; }
-        .registry-contact-block strong { color: var(--primary); }
-        .badge-capsule { display: inline-block; background: #854d0e; color: #fff; font-size: 0.75rem; font-weight: 700; padding: 4px 8px; border-radius: 4px; text-transform: uppercase; }
+      :root { 
+    --primary-blue: #0056b3;
+    --dark-charcoal: #222222;
+    --light-gray: #f8f9fa;
+    --border-color: #e0e0e0;
+    --text-muted: #555555;
+    --accent-green: #1b5e20;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.7; color: var(--dark-charcoal); max-width: 1100px; margin: 0 auto; padding: 0 20px; background-color: #ffffff; }
 
-        /* Navigation Grid */
-        .navigation-grid-row { display: flex; justify-content: flex-end; align-items: center; gap: 25px; margin-top: 20px; background: var(--light); padding: 12px 20px; border-radius: 6px; box-shadow: inset 0 1px 2px rgba(0,0,0,0.05); }
-        .navigation-grid-row a { text-decoration: none; color: #374151; font-weight: 600; font-size: 0.95rem; text-transform: capitalize; position: relative; padding-bottom: 4px; transition: color 0.2s; }
-        .navigation-grid-row a:hover { color: var(--accent); }
-        .navigation-grid-row a.active { color: var(--accent); font-weight: 700; }
-        .navigation-grid-row a.active::after { content: ""; position: absolute; bottom: 0; left: 0; width: 100%; height: 3px; background: var(--accent); border-radius: 2px; }
+/* 🏢 PERFECTED INSTITUTIONAL HEADER FIXED COMPONENT */
+.institutional-header {
+    background: #ffffff;
+    border-bottom: 3px solid var(--primary-blue);
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.identity-brand { display: flex; align-items: center; gap: 1.2rem; }
+.emblem-wrapper { display: flex; align-items: center; gap: 0.8rem; }
+.emblem-img { height: 65px; width: auto; object-fit: contain; }
+.capsule-badge { background-color: var(--primary-blue); color: #ffffff; padding: 0.25rem 0.75rem; border-radius: 50px; font-size: 0.75rem; font-weight: bold; text-transform: uppercase; letter-spacing: 0.05em; }
+.branding-text { font-size: 1.6rem; font-weight: 800; color: var(--dark-charcoal); text-transform: uppercase; letter-spacing: -0.02em; line-height: 1.1; text-align: left; }
 
-        /* Content Layout Components */
-        main { max-width: 900px; margin: 0 auto; padding: 20px 0; display: block; }
-        h2 { color: var(--primary); border-bottom: 2px solid #eff6ff; padding-bottom: 8px; margin-top: 40px; font-size: 1.75rem; }
-        
-        /* Section 1: Live Feed Component Styling */
-        .live-feed-card { background: #fffbf7; border: 1px solid #fed7aa; border-left: 5px solid #f97316; border-radius: 6px; padding: 20px; margin-bottom: 15px; text-align: left; }
-        
-        /* Section 2: Historical Archive Cards */
-        .archive-card-row { background: #ffffff; border: 1px solid #e2e8f0; border-left: 4px solid #cbd5e1; border-radius: 6px; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; text-align: left; margin-bottom: 12px; }
-        
-        /* Section 3: Master Plan Matrix Table Styles */
-        .matrix-table { width: 100%; border-collapse: collapse; margin-top: 20px; margin-bottom: 20px; font-size: 0.92rem; text-align: left; }
-        .matrix-table th { background-color: var(--primary); color: white; padding: 12px; font-weight: 600; }
-        .matrix-table td { padding: 14px 12px; border-bottom: 1px solid #e2e8f0; vertical-align: top; }
-        .matrix-table tr:nth-child(even) { background-color: var(--light); }
-        .bullet-list { padding-left: 18px; margin: 4px 0; }
-        .bullet-list li { margin-bottom: 4px; }
+.secretariat-contact { font-size: 0.85rem; text-align: right; border-left: 2px solid var(--border-color); padding-left: 1.5rem; line-height: 1.4; }
+.secretariat-contact p { margin-bottom: 0.2rem; }
+.secretariat-contact strong { font-weight: 800; color: var(--dark-charcoal); }
+.secretariat-contact a { color: var(--primary-blue); text-decoration: none; font-weight: bold; }
+
+/* --- NAVIGATION GRID --- */
+.main-nav { background-color: var(--dark-charcoal); padding: 0.75rem 2rem; display: block; margin-bottom: 20px; }
+.nav-links { display: flex; list-style: none; gap: 2rem; justify-content: flex-start; }
+.nav-links a { color: #ffffff; text-decoration: none; font-size: 0.95rem; font-weight: 600; transition: color 0.2s ease; }
+.nav-links a:hover, .nav-links a.active { color: #3498db; }
+
+/* --- CONTENT CARD CONTAINER --- */
+.content-card-box { background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 35px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02); margin-bottom: 40px; }
     </style>
 </head>
 <body>
 
-    <!-- Standardized Navigation Header Frame -->
-    <div class="brand-header-container">
-        <div class="banner-row">
-            <div class="org-branding-box">
-                <div style="font-family: 'Segoe UI', Arial, sans-serif; margin: 0; line-height: 1.2; text-align: left;">
-                    <span style="font-size: 2.5rem; font-weight: 800; color: #1b5e20; letter-spacing: -0.5px; text-transform: uppercase;">Local Urban Forum</span><br>
-                    <span style="font-size: 1.3rem; font-weight: 700; color: #4b5563; letter-spacing: 4px; text-transform: uppercase;">N E T W O R K</span>
-                </div>
-                <div class="logo-graphics-sub">
-                    <div style="background: transparent; display: inline-block;">
-                        <img src="emblem.png" alt="LUF Network Emblem" style="height: 75px; width: auto; display: block; object-fit: contain;">
-                    </div>
-                    <span class="badge-capsule" style="background: #1e3a8a; color: #fff;">LUF - Network</span>
-                </div>
-            </div>
-            
-            <div class="registry-contact-block">
-                <span class="badge-capsule" style="background: #854d0e; font-weight: 900; letter-spacing: 0.5px; display: inline-block; margin-bottom: 6px;">Official Secretariat</span><br>
-                P. O. BOX 34899-00600 - NAIROBI<br>
-                <strong>Phone:</strong> 0727835122 / 0733582084<br>
-                <strong>Email:</strong> solidaritykenya@yahoo.com<br>
-                <strong>Website:</strong> lufnetwork.github.io
-            </div>
+<!-- 🏢 UNIFIED FIXED INSTITUTIONAL HEADER FRAME -->
+<header class="institutional-header">
+    
+        <div class="emblem-wrapper">
+            <img src="emblem.png" alt="Local Urban Forum NETWORK Emblem" class="emblem-img">
+            <span class="capsule-badge">Official</span>
         </div>
-
-        <div class="navigation-grid-row">
-            <a href="index.html">Home</a>
-            <a href="about.html">About Us</a>
-            <a href="management.html">Management</a>
-            <a href="projects.html" class="active">Our Projects</a>
-            <a href="partners.html">Partners & Synergy</a>
-        </div>
+        <h1 class="branding-text">Local Urban Forum NETWORK</h1>
     </div>
+    
+    <div class="secretariat-contact">
+        <p><strong>SECRETARIAT CONTACT BLOCK</strong></p>
+        <p>P.O. Box: <strong>34899-00600</strong></p>
+        <p>Phone: <strong>0727835122 / 0733582084</strong></p>
+        <p>Web: <strong><a href="https://github.io" target="_blank">lufnetwork.github.io</a></strong></p>
+    </div>
+</header>
 
+<!-- NAVIGATION BAR -->
+<nav class="main-nav">
+    <ul class="nav-links">
+        <li><a href="index.html">index.html (Home)</a></li>
+        <li><a href="about.html">about.html (About Us)</a></li>
+        <li><a href="management.html">management.html (Management)</a></li>
+        <li><a href="projects.html" class="active">Our Projects</a></li>
+        <li><a href="partners.html">Partners & Synergy</a></li>
+    </ul>
+</nav>
+
+<!-- MAIN REPOSITORY CONTENT CONTAINER -->
+<main class="content-card-box">
     <main>
         <!-- SECTION 1: LIVE ADVOCACY FEED (Breaking News Dashboard) -->
         <section id="live-breaking-feed">
