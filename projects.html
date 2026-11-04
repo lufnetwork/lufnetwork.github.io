@@ -3,246 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Projects | LUF Network</title>
+    <title>Strategic Delivery Ledger - LUF Network</title>
     <style>
-      :root { 
-    --primary-blue: #0056b3;
-    --dark-charcoal: #222222;
-    --light-gray: #f8f9fa;
-    --border-color: #e0e0e0;
-    --text-muted: #555555;
-    --accent-green: #1b5e20;
-}
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.7; color: var(--dark-charcoal); max-width: 1100px; margin: 0 auto; padding: 0 20px; background-color: #ffffff; }
-
-/* 🏢 PERFECTED INSTITUTIONAL HEADER FIXED COMPONENT */
-.institutional-header {
-    background: #ffffff;
-    border-bottom: 3px solid var(--primary-blue);
-    padding: 1.5rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-}
-.identity-brand { display: flex; align-items: center; gap: 1.2rem; }
-.emblem-wrapper { display: flex; align-items: center; gap: 0.8rem; }
-.emblem-img { height: 65px; width: auto; object-fit: contain; }
-.capsule-badge { background-color: var(--primary-blue); color: #ffffff; padding: 0.25rem 0.75rem; border-radius: 50px; font-size: 0.75rem; font-weight: bold; text-transform: uppercase; letter-spacing: 0.05em; }
-.branding-text { font-size: 1.6rem; font-weight: 800; color: var(--dark-charcoal); text-transform: uppercase; letter-spacing: -0.02em; line-height: 1.1; text-align: left; }
-
-.secretariat-contact { font-size: 0.85rem; text-align: right; border-left: 2px solid var(--border-color); padding-left: 1.5rem; line-height: 1.4; }
-.secretariat-contact p { margin-bottom: 0.2rem; }
-.secretariat-contact strong { font-weight: 800; color: var(--dark-charcoal); }
-.secretariat-contact a { color: var(--primary-blue); text-decoration: none; font-weight: bold; }
-
-/* --- NAVIGATION GRID --- */
-.main-nav { background-color: var(--dark-charcoal); padding: 0.75rem 2rem; display: block; margin-bottom: 20px; }
-.nav-links { display: flex; list-style: none; gap: 2rem; justify-content: flex-start; }
-.nav-links a { color: #ffffff; text-decoration: none; font-size: 0.95rem; font-weight: 600; transition: color 0.2s ease; }
-.nav-links a:hover, .nav-links a.active { color: #3498db; }
-
-/* --- CONTENT CARD CONTAINER --- */
-.content-card-box { background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 35px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02); margin-bottom: 40px; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0; background-color: #fcfcfc; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 20px; }
+        
+        /* Institutional Letterhead Header Section */
+        .header-block { border-bottom: 3px solid #0056b3; padding-bottom: 20px; margin-bottom: 20px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; }
+        .branding-group { display: flex; align-items: center; }
+        .logo-badge { background-color: #e6f0fa; border-radius: 50px; padding: 5px 15px; display: inline-flex; align-items: center; margin-right: 15px; border: 1px solid #b3d1ff; }
+        .logo-img { height: 45px; width: auto; }
+        .brand-title { font-size: 24px; font-weight: 800; color: #111; text-transform: uppercase; letter-spacing: 0.5px; margin: 0; }
+        .brand-title span { font-weight: 400; color: #555; text-transform: none; display: block; font-size: 14px; margin-top: 2px; }
+        .secretariat-contact { font-size: 12px; text-align: right; color: #444; line-height: 1.4; }
+        .secretariat-contact strong { font-weight: 800; color: #000; }
+        
+        /* Navigation Grid Component */
+        .main-nav { background-color: #2d3748; padding: 0.75rem 2rem; display: block; margin-bottom: 30px; border-radius: 6px; }
+        .nav-links { display: flex; list-style: none; gap: 2rem; justify-content: flex-start; margin: 0; padding: 0; }
+        .nav-links a { color: #ffffff; text-decoration: none; font-size: 0.95rem; font-weight: 600; transition: color 0.2s ease; }
+        .nav-links a:hover, .nav-links a.active { color: #3498db; }
+        
+        /* System Integration Callout Box */
+        .sync-banner { background: #e8f8f5; border: 1px solid #a3e4d7; border-radius: 8px; padding: 25px; margin-bottom: 35px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; }
+        .sync-info { flex: 1; min-width: 280px; }
+        .sync-title { font-size: 16px; font-weight: bold; color: #117a65; margin: 0 0 5px 0; }
+        .sync-text { font-size: 13.5px; color: #16a085; margin: 0; }
+        
+        /* Direct Excel Download Action Button */
+        .download-btn { background-color: #27ae60; color: white; text-decoration: none; padding: 12px 20px; border-radius: 6px; font-weight: 700; font-size: 14px; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); transition: background-color 0.2s; }
+        .download-btn:hover { background-color: #219653; }
+        
+        /* Content Components */
+        h2 { color: #0056b3; font-size: 20px; border-bottom: 1px solid #e2e8f0; padding-bottom: 8px; margin-top: 35px; }
+        .plan-card { background: white; border: 1px solid #e2e8f0; border-radius: 8px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.01); }
+        .plan-meta { display: flex; justify-content: space-between; font-size: 12.5px; color: #718096; font-weight: bold; text-transform: uppercase; margin-bottom: 10px; border-bottom: 1px dashed #edf2f7; padding-bottom: 8px; }
+        .plan-title { font-size: 16px; font-weight: 700; color: #2d3748; margin: 0 0 8px 0; }
     </style>
 </head>
 <body>
 
-<!-- 🏢 UNIFIED FIXED INSTITUTIONAL HEADER FRAME -->
-<header class="institutional-header">
+<div class="container">
     
-        <div class="emblem-wrapper">
-            <img src="emblem.png" alt="Local Urban Forum NETWORK Emblem" class="emblem-img">
-            <span class="capsule-badge">Official</span>
+    <header class="header-block">
+        <div class="branding-group">
+            <div class="logo-badge">
+                <img src="emblem.png" alt="LUF Network Emblem" class="logo-img">
+            </div>
+            <h1 class="brand-title">Local Urban Forum NETWORK<span>Strategic Delivery Ledger</span></h1>
         </div>
-        <h1 class="branding-text">Local Urban Forum NETWORK</h1>
-    </div>
-    
-    <div class="secretariat-contact">
-        <p><strong>SECRETARIAT CONTACT BLOCK</strong></p>
-        <p>P.O. Box: <strong>34899-00600</strong></p>
-        <p>Phone: <strong>0727835122 / 0733582084</strong></p>
-        <p>Web: <strong><a href="https://github.io" target="_blank">lufnetwork.github.io</a></strong></p>
-    </div>
-</header>
+        <div class="secretariat-contact">
+            <strong>SECRETARIAT:</strong><br>
+            P.O. Box 34899-00600<br>
+            Nairobi, Kenya<br>
+            <strong>T:</strong> 0727835122 / 0733582084
+        </div>
+    </header>
 
-<!-- NAVIGATION BAR -->
-<nav class="main-nav">
-    <ul class="nav-links">
-        <li><a href="index.html">index.html (Home)</a></li>
-        <li><a href="about.html">about.html (About Us)</a></li>
-        <li><a href="management.html">management.html (Management)</a></li>
-        <li><a href="projects.html" class="active">Our Projects</a></li>
-        <li><a href="partners.html">Partners & Synergy</a></li>
-    </ul>
-</nav>
+    <!-- Standardized Site Navigation Menu -->
+    <nav class="main-nav">
+        <ul class="nav-links">
+            <li><a href="index.html">index.html (Home)</a></li>
+            <li><a href="about.html">about.html (About Us)</a></li>
+            <li><a href="management.html">management.html (Management)</a></li>
+            <li><a href="projects.html" class="active">Our Projects</a></li>
+            <li><a href="creative-practice.html">Creative Practice</a></li>
+            <li><a href="partners.html">Partners &amp; Synergy</a></li>
+        </ul>
+    </nav>
 
-<!-- MAIN REPOSITORY CONTENT CONTAINER -->
-<main class="content-card-box">
     <main>
-        <!-- SECTION 1: LIVE ADVOCACY FEED (Breaking News Dashboard) -->
-        <section id="live-breaking-feed">
-            <h2>Live Advocacy Feed</h2>
-            <div class="live-feed-card">
-                <div style="font-size: 0.8rem; font-weight: 700; color: #ea580c; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 5px; display: flex; align-items: center; gap: 8px;">
-                    <span style="width: 8px; height: 8px; background: #ea580c; border-radius: 50%; display: inline-block;"></span> Active Dispatch — Current Operations Log
-                </div>
-                <p style="margin: 5px 0 0 0; font-size: 1.05rem; color: #292524; line-height: 1.5;">
-                    <strong>Path C Formally Deployed (August 2026):</strong> LUF Network has shifted its strategic capacity-building parameters away from national ministry bottlenecks. Under the supervision of Oliver Erupe (Field Operations) and Dr. Olivia Onditi (Health & Wellness Unit), ward-level facility permission routing has been initiated directly via the Nairobi City County Health Department.
-                </p>
+        <!-- Live Open-Access Database Sync Component Banner -->
+        <div class="sync-banner">
+            <div class="sync-info">
+                <div class="sync-title">🔄 Empirical Clearinghouse Registry Intersect</div>
+                <p class="sync-text">Our backend operational database log tracks frontline metrics, mobilization frameworks, and asset distribution indicators across decentralized sub-county sectors in real-time.</p>
             </div>
-        </section>
+            <a href="posts.csv" class="download-btn" download>📥 Download Raw Field Database (Excel CSV)</a>
+        </div>
 
-        <!-- SECTION 2: FUTURE PROGRAMMATIC UPDATE LOGS (Past Milestones Archive) -->
-        <section id="programmatic-archive-logs" style="margin-bottom: 40px;">
-            <h3 style="color: #4b5563; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1px; font-weight: 700; margin-top: 5px; margin-bottom: 15px;">
-                Historical Operations Registry (Past Milestones)
-            </h3>
-            <div style="display: flex; flex-direction: column; gap: 2px;">
-                
-                <!-- Archive Card Log #001: This houses our past work as we push newer items to the top -->
-                <div class="archive-card-row">
-                    <div style="max-width: 750px;">
-                        <span style="font-size: 0.75rem; font-weight: 700; color: #6b7280; text-transform: uppercase; letter-spacing: 0.5px; display: block; margin-bottom: 4px;">
-                            Log Entry #001 — Wednesday, August 26, 2026
-                        </span>
-                        <p style="margin: 0; font-size: 0.95rem; color: #4b5563; line-height: 1.5;">
-                            Initial clinical asset mapping finalized. Public transparency layout frameworks separated inside repository to simplify eventual 2026 Annual Progress Reporting structures.
-                        </p>
-                    </div>
-                    <span style="font-size: 0.75rem; font-weight: 700; color: #1e3a8a; background: #eff6ff; padding: 4px 10px; border-radius: 4px; text-transform: uppercase;">Archived</span>
-                </div>
+        <h2>Stage 1 (Year 1) Strategic Multi-Year Realignment Framework</h2>
+        <p style="font-size: 14.5px; color: #4a5568; margin-bottom: 25px;">The decentralized operational blueprint activates our ward-level monitoring frameworks under a targeted DKK 120,000 budget ceiling to ensure absolute system compliance before structural multi-year scaling paths open.</p>
 
-                <!-- Future Log Slot Placeholder -->
-                <div style="border: 1px dashed #cbd5e1; border-radius: 6px; padding: 15px; text-align: center; color: #94a3b8; font-size: 0.85rem; font-style: italic; background: #fafafa; margin-top: 5px;">
-                    Awaiting next field operations synchronization dispatch to cycle down...
-                </div>
+        <!-- Project Element 1 -->
+        <div class="plan-card">
+            <div class="plan-meta">
+                <span>Pillar: Governance</span>
+                <span>Budget: DKK 15,000.00</span>
+                <span>Status: COMPLIANCE LOCK</span>
             </div>
-        </section>
-        <!-- SECTION 3: MULTI-YEAR STRATEGIC DELIVERY MATRIX (PATH C) -->
-        <section id="decentralized-delivery-ledger" style="margin-bottom: 50px;">
-            <h2>Multi-Year Strategic Delivery Matrix (Path C)</h2>
-            <p style="color: #4b5563; font-size: 0.95rem; margin-bottom: 20px;">Comprehensive decentralization ledger moving mental health triage workflows straight into sub-county level clinics (Mathare North, Huruma, and Baba Dogo) to bypass referral delays.</p>
-            
-            <table class="matrix-table">
-                <thead>
-                    <tr>
-                        <th style="width: 25%;">Activity & Timeline</th>
-                        <th style="width: 25%;">Core Personnel</th>
-                        <th style="width: 35%;">Decentralized Hub Adaptation (Path C)</th>
-                        <th style="width: 15%;">Budget</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>1. Curriculum & KEML Mapping</strong><br><small style="color:#6b7280;">Months 1–3 (Feb-Apr 2027)</small></td>
-                        <td>
-                            <ul class="bullet-list">
-                                <li>2 Mathari Facilitators</li>
-                                <li>1 LUF Evaluator</li>
-                                <li>5 Psychiatric Registrars</li>
-                            </ul>
-                        </td>
-                        <td><strong>Operational Baseline:</strong> Syncs localized training parameters with the Kenya Essential Medicines List to ensure primary dispensaries possess correct baseline pharmacy matching.</td>
-                        <td style="font-weight: 700; color: var(--green);">DKK 15,000</td>
-                    </tr>
-                    <tr>
-                        <td><strong>2. Hardware & Kit Deployment</strong><br><small style="color:#6b7280;">Months 2–4 (Mar-May 2027)</small></td>
-                        <td>
-                            <ul class="bullet-list">
-                                <li>1 LUF Evaluator</li>
-                                <li>2 Mathari Staff</li>
-                                <li>10 Biomedical Interns</li>
-                            </ul>
-                        </td>
-                        <td><strong>Hub Mobilization:</strong> Supplying and stress-testing **20 Mobile Mastery Kits** (portable screening arrays) directly inside ward facility consultation rooms.</td>
-                        <td style="font-weight: 700; color: var(--green);">DKK 55,000</td>
-                    </tr>
-                    <tr>
-                        <td><strong>3. Clinical Bootcamp</strong><br><small style="color:#6b7280;">Month 5 (June 2027)</small></td>
-                        <td>
-                            <ul class="bullet-list">
-                                <li>2 Mathari Facilitators</li>
-                                <li>1 LUF Evaluator</li>
-                                <li>20 Senior Students</li>
-                            </ul>
-                        </td>
-                        <td><strong>Capacity Scaling:</strong> Intensive 3-day certificate seminar certifying 20 elite student "Clinical Champions" to supervise everyday ward triage workflows.</td>
-                        <td style="font-weight: 700; color: var(--green);">DKK 25,000</td>
-                    </tr>
-                    <tr>
-                        <td><strong>4. Frontline Floor Pilot Run</strong><br><small style="color:#6b7280;">Months 6–12 (Jul 2027 - Jan 2028)</small></td>
-                        <td>
-                            <ul class="bullet-list">
-                                <li>20 Clinical Champions</li>
-                                <li>2 Mathari Facilitators</li>
-                                <li>1 LUF Evaluator</li>
-                            </ul>
-                        </td>
-                        <td><strong>Active Pilot execution:</strong> Direct bedside teaching models and diagnostic evaluations training 100 clinical interns on outpatient neuropsychiatric triage.</td>
-                        <td style="font-weight: 700; color: var(--green);">DKK 25,000</td>
-                    </tr>
-                </tbody>
-            </table>
-            
-            <div style="background-color: var(--light); padding: 15px 20px; border-radius: 6px; font-weight: 700; color: var(--primary); text-align: right; font-size: 1.05rem; border-right: 4px solid var(--green);">
-                Total Year 1 Allocation Framework: DKK 120,000
+            <div class="plan-title">Curriculum Mapping &amp; KEML Alignment Track</div>
+            <p style="margin: 0; font-size: 14px; color: #4a5568;">Securing unified coordination parameters alongside Nairobi City County Health Management Teams (CHMT) to anchor curriculum tracking criteria to formal Kenya Essential Medicines List parameters.</p>
+        </div>
+
+        <!-- Project Element 2 -->
+        <div class="plan-card">
+            <div class="plan-meta">
+                <span>Pillar: Smart Technology</span>
+                <span>Budget: DKK 45,000.00</span>
+                <span>Status: SYSTEM LIVE</span>
             </div>
-        </section>
-  <!-- SECTION 4: FIELD EVIDENCE & ACTIVITY HIGHLIGHTS -->
-        <section id="field-evidence-gallery" style="margin-top: 50px; margin-bottom: 20px;">
-            <h2 style="color: var(--primary); font-size: 1.75rem; border-bottom: 2px solid #eff6ff; padding-bottom: 8px;">
-                Field Evidence & Progress Gallery
-            </h2>
-            <p style="color: #4b5563; font-size: 0.95rem; margin-bottom: 25px;">
-                Visual verification records logging community triage infrastructure deployments and grassroots advocacy operations.
-            </p>
+            <div class="plan-title">Hardware Infrastructure Deployment (20 Mobile Mastery Kits)</div>
+            <p style="margin: 0; font-size: 14px; color: #4a5568;">Mobilization and distribution of 20 edge data communication kits across active frontline hubs (Mathare North, Huruma, Baba Dogo) to eliminate communication latency during field tracking workflows.</p>
+        </div>
 
-            <div style="display: grid; grid-template-columns: 1fr; gap: 25px; margin-bottom: 30px;">
-                <!-- Min-width media query for desktop side-by-side rows -->
-                <style>
-                    @media (min-width: 768px) { .evidence-row { display: grid; grid-template-columns: 320px 1fr; gap: 25px; align-items: center; } }
-                </style>
-
-                <!-- Activity Entry 1: Distribution Loop -->
-                <div class="evidence-row" style="background: var(--light); border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden; padding: 15px;">
-                    <div style="width: 100%; height: 200px; background: #cbd5e1; border-radius: 6px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
-                        <!-- Automatically displays your repository distribution image -->
-                        <img src="distribution.png.jpg" alt="LUF Distribution Matrix" style="width: 100%; height: 100%; object-fit: cover;">
-                    </div>
-                    <div style="padding: 10px 5px;">
-                        <span class="badge-capsule" style="background: var(--accent); margin-bottom: 8px;">Logistics Deployment</span>
-                        <h4 style="margin: 5px 0; color: var(--primary); font-size: 1.2rem; font-weight: 700;">Sub-County Facility Permission Routing</h4>
-                        <p style="margin: 0; font-size: 0.95rem; color: #4b5563; line-height: 1.5;">
-                            Oliver Erupe coordinating baseline structural matching across identified clinic sectors. This tracking matrix charts resource flow paths directly connecting our central secretariat supervisors with localized ward triage spaces.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Activity Entry 2: Historical Field Records -->
-                <div class="evidence-row" style="background: var(--light); border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden; padding: 15px;">
-                    <div style="width: 100%; height: 200px; background: #cbd5e1; border-radius: 6px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
-                        <!-- Automatically displays your repository advocacy data image -->
-                        <img src="kenya-advocacy.jpg" alt="Nairobi Community Health Records" style="width: 100%; height: 100%; object-fit: cover;">
-                    </div>
-                    <div style="padding: 10px 5px;">
-                        <span class="badge-capsule" style="background: #16a34a; margin-bottom: 8px;">Community Baseline</span>
-                        <h4 style="margin: 5px 0; color: var(--primary); font-size: 1.2rem; font-weight: 700;">Grassroots Mental Health Screening Logs</h4>
-                        <p style="margin: 0; font-size: 0.95rem; color: #4b5563; line-height: 1.5;">
-                            Dr. Olivia Onditi compilation of historical neighborhood health metrics collected during past open-air barazas. These records establish the core statistical baseline for measuring our upcoming 30% diagnostic error reduction target.
-                        </p>
-                    </div>
-                </div>
-
+        <!-- Project Element 3 -->
+        <div class="plan-card">
+            <div class="plan-meta">
+                <span>Pillar: Health &amp; Wellness</span>
+                <span>Budget: DKK 30,000.00</span>
+                <span>Status: VERIFIED IN FIELD</span>
             </div>
-        </section>
+            <div class="plan-title">Intensive Frontline Bootcamp Certification Modules</div>
+            <p style="margin: 0; font-size: 14px; color: #4a5568;">Conducted sub-county educational rollouts certifying 35 frontline community health practitioners on mobile data tools and qualitative monitoring frameworks.</p>
+        </div>
+
+        <!-- Project Element 4 -->
+        <div class="plan-card">
+            <div class="plan-meta">
+                <span>Pillar: Emergency Loops</span>
+                <span>Budget: DKK 30,000.00</span>
+                <span>Status: SYSTEM LIVE</span>
+            </div>
+            <div class="plan-title">Doorstep Screening Pipeline &amp; Sector Launch</div>
+            <p style="margin: 0; font-size: 14px; color: #4a5568;">Activation of local field tracking loops across 10 high-density target informal settlements, establishing a permanent data sync pipeline between localized community hubs and core base referral centers.</p>
+        </div>
     </main>
-
-    <footer style="margin-top: 60px; padding: 20px 0; border-top: 1px solid #e5e7eb; text-align: center; font-size: 0.9rem; color: #6b7280;">
-        <p>&copy; 2026 Local Urban Forum Network (LUF Network) • Global Transparency & Public Archive Registry</p>
-    </footer>
+</div>
 
 </body>
 </html>
