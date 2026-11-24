@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us | LUF Network</title>
+    <title>About Us | Local Urban Forum Network (LUF Network)</title>
+    <meta name="description" content="Heritage, institutional chronology, and legal compliance framework of the Local Urban Forum Network (LUF Network) across Nairobi informal settlements.">
     <style>
       :root { 
     --primary-blue: #0056b3;
@@ -40,19 +41,26 @@ body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height
 
 /* --- NAVIGATION GRID --- */
 .main-nav { background-color: var(--dark-charcoal); padding: 0.75rem 2rem; display: block; margin-bottom: 20px; }
-.nav-links { display: flex; list-style: none; gap: 2rem; justify-content: flex-start; }
+.nav-links { display: flex; list-style: none; gap: 1.6rem; flex-wrap: wrap; justify-content: flex-start; }
 .nav-links a { color: #ffffff; text-decoration: none; font-size: 0.95rem; font-weight: 600; transition: color 0.2s ease; }
 .nav-links a:hover, .nav-links a.active { color: #3498db; }
 
 /* --- CONTENT CARD CONTAINER --- */
 .content-card-box { background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 35px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02); margin-bottom: 40px; }
+.intro-lead { font-size: 1.05rem; font-weight: 500; color: #1e293b; margin-bottom: 14px; }
+section p { margin-bottom: 14px; }
+section h2 { color: var(--primary-blue); font-size: 1.65rem; font-weight: 800; margin-bottom: 14px; }
+.grid-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; margin-top: 15px; }
+.profile-card { background: var(--light-gray); border: 1px solid var(--border-color); border-top: 4px solid var(--primary-blue); border-radius: 8px; padding: 18px; }
+.profile-card h3 { color: var(--primary-blue); font-size: 1.05rem; margin-bottom: 8px; }
+        
     </style>
 </head>
 <body>
 
     <!-- 🏢 UNIFIED FIXED INSTITUTIONAL HEADER FRAME -->
 <header class="institutional-header">
-    
+<div class="identity-brand">
         <div class="emblem-wrapper">
             <img src="emblem.png" alt="Local Urban Forum NETWORK Emblem" class="emblem-img">
             <span class="capsule-badge">Official</span>
@@ -64,7 +72,7 @@ body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height
         <p><strong>SECRETARIAT CONTACT BLOCK</strong></p>
         <p>P.O. Box: <strong>34899-00100</strong></p>
         <p>Phone: <strong>0727835122 / 0733582084</strong></p>
-        <p>Web: <strong><a href="https://github.io" target="_blank">lufnetwork.github.io</a></strong></p>
+        <p>Web: <strong><a href="https://lufnetwork.github.io/" target="_blank">lufnetwork.github.io</a></strong></p>
     </div>
 </header>
 
@@ -75,13 +83,14 @@ body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height
         <li><a href="about.html" class="active">about.html (About Us)</a></li>
         <li><a href="management.html">management.html (Management)</a></li>
         <li><a href="projects.html">Our Projects</a></li>
-        <li><a href="partners.html">Partners & Synergy</a></li>
+        <li><a href="creative-practice.html">Creative Practice</a></li>
+        <li><a href="partners.html">Partners &amp; Synergy</a></li>
     </ul>
 </nav>
 
 <!-- MAIN REPOSITORY CONTENT CONTAINER -->
 <main class="content-card-box">
-    <main>
+    
         <!-- Section 1: Legacy Text -->
         <section>
             <h2>Our Heritage & Legacy</h2>
@@ -157,8 +166,8 @@ body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height
         </section>
 
         <!-- Section 4: Compliance Footer Box -->
-        <section style="margin: 40px 0; padding: 25px; border-left: 4px solid var(--accent); background: #eff6ff; border-radius: 0 8px 8px 0;">
-            <h3 style="margin-top:0; color: var(--primary);">Legal & Compliance Matrix</h3>
+        <section style="margin: 40px 0; padding: 25px; border-left: 4px solid var(--accent-green); background: #eff6ff; border-radius: 0 8px 8px 0;">
+            <h3 style="margin-top:0; color: var(--primary-blue);">Legal & Compliance Matrix</h3>
             <p style="margin-bottom:0; font-size:0.95rem; color:#374151;">The Local Urban Forum Network operates under the strict regulatory governance of the NGOs Co-ordination Act within the Republic of Kenya. All program workflows, distributed resource allocations, and multi-year auditing processes are fully documented inside our public-facing ledger to guarantee absolute structural integrity for community stakeholders, facility managers, and international partners.</p>
         </section>
     </main>
