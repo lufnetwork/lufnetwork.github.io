@@ -6,7 +6,7 @@
     <title>Creative Practice Portfolio - LUF Network</title>
     <style>
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0; }
-        .container { max-width: 900px; margin: 0 auto; padding: 20px; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 20px; }
         
         /* Institutional Letterhead Header Section */
         .header-block { border-bottom: 3px solid #0056b3; padding-bottom: 20px; margin-bottom: 30px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; }
@@ -38,27 +38,50 @@
 
         /* Footer Reference styling */
         .footer-ref { font-size: 13px; color: #666; margin-top: 40px; border-top: 1px solid #eee; padding-top: 15px; }
-    </style>
+        .institutional-header { background: #ffffff; border-bottom: 3px solid #0056b3; padding: 1.5rem 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem; }
+   .identity-brand { display: flex; align-items: center; gap: 1.2rem; }
+   .emblem-wrapper { display: flex; align-items: center; gap: 0.8rem; }
+   .emblem-img { height: 65px; width: auto; object-fit: contain; }
+   .capsule-badge { background-color: #0056b3; color: #ffffff; padding: 0.25rem 0.75rem; border-radius: 50px; font-size: 0.75rem; font-weight: bold; text-transform: uppercase; letter-spacing: 0.05em; }
+   .branding-text { font-size: 1.6rem; font-weight: 800; color: #222222; text-transform: uppercase; letter-spacing: -0.02em; line-height: 1.1; text-align: left; }
+  .secretariat-contact p { margin-bottom: 0.2rem; }
+   .secretariat-contact strong { font-weight: 800; color: #222222; }
+   .secretariat-contact a { color: #0056b3; text-decoration: none; font-weight: bold; }
+   .main-nav { background-color: #222222; padding: 0.75rem 2rem; display: block; margin-bottom: 20px; }
+   .nav-links { display: flex; list-style: none; gap: 1.5rem; flex-wrap: wrap; justify-content: flex-start; margin: 0; padding: 0; }
+   .nav-links a { color: #ffffff; text-decoration: none; font-size: 0.95rem; font-weight: 600; transition: color 0.2s ease; }
+   .nav-links a:hover, .nav-links a.active { color: #3498db; }
+</style>
 </head>
 <body>
-
-<div class="container">
-    
-    <header class="header-block">
-        <div class="branding-group">
-            <div class="logo-badge">
-                <img src="emblem.png" alt="LUF Network Emblem" class="logo-img">
-            </div>
-            <h1 class="brand-title">Local Urban Forum NETWORK<span>Creative Practice Portfolio</span></h1>
+<div class="container">       
+ <header class="institutional-header">
+ <div class="identity-brand">   
+        <div class="emblem-wrapper">
+            <img src="emblem.png" alt="Local Urban Forum NETWORK Emblem" class="emblem-img">
+            <span class="capsule-badge">Official</span>
         </div>
-        <div class="secretariat-contact">
-            <strong>SECRETARIAT:</strong><br>
-            P.O. Box 34899-00100<br>
-            Nairobi, Kenya<br>
-            <strong>T:</strong> 0727835122 / 0733582084
-        </div>
-    </header>
-
+        <h1 class="branding-text">Local Urban Forum NETWORK</h1>
+    </div>
+    <div class="secretariat-contact">
+        <p><strong>SECRETARIAT CONTACT BLOCK</strong></p>
+        <p>P.O. Box: <strong>34899-00100</strong></p>
+        <p>Phone: <strong>0727835122 / 0733582084</strong></p>
+        <p>Web: <strong><a href="https://github.io" target="_blank">lufnetwork.github.io</a></strong></p>
+    </div>
+</header>
+<nav class="main-nav">
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="management.html">Management</a></li>
+        <li><a href="projects.html">Our Projects</a></li>
+        <li><a href="creative-practice.html" class="active">Creative Practice</a></li>
+        <li><a href="partners.html">Partners &amp; Synergy</a></li>
+        <li><a href="advocacy.html">Live Advocacy</a></li>
+    </ul>
+</nav>
+   
     <!-- Main Content Section -->
     <main>
         <div class="overview-box">
